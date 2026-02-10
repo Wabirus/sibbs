@@ -1,0 +1,946 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SIBBS - Kenyan Real Estate Experts</title>
+    <meta name="description"
+        content="SIBBS - Your trusted partner in Kenyan real estate. Property sales, land investments, rental management, and consultancy services.">
+    <style>
+        /* Reset and Base Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary-blue: #2c3892;
+            --gold: #D4AF37;
+            --white: #ffffff;
+            --light-gray: #f8f9fa;
+            --dark-gray: #333333;
+            --text-dark: #333;
+            --text-light: #fff;
+            --spacing-sm: 1rem;
+            --spacing-md: 2rem;
+            --spacing-lg: 4rem;
+        }
+
+        body {
+            font-family: 'Nunito', 'Helvetica', Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--dark-gray);
+            background-color: var(--white);
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            font-family: 'Raleway', 'Helvetica', sans-serif;
+            font-weight: 700;
+            margin-bottom: var(--spacing-sm);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 var(--spacing-sm);
+        }
+
+        /* Top Bar */
+        .top-bar {
+            background: linear-gradient(135deg, #1a2473 0%, var(--primary-blue) 50%, #3d4db7 100%);
+            color: var(--white);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 0 var(--spacing-md);
+            position: fixed;
+            top: 0;
+            width: 100%;
+            height: 44px;
+            z-index: 1001;
+            font-size: 0.88rem;
+            gap: 12px;
+            letter-spacing: 0.3px;
+            border-bottom: 2px solid var(--gold);
+        }
+
+        .top-bar-inner {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 30px;
+            max-width: 1200px;
+            width: 100%;
+        }
+
+        .top-bar .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            transition: opacity 0.3s;
+        }
+
+        .top-bar .contact-item:hover {
+            opacity: 0.85;
+        }
+
+        .top-bar .contact-item .icon-circle {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 26px;
+            height: 26px;
+            background: rgba(255, 255, 255, 0.15);
+            border-radius: 50%;
+            font-size: 0.75rem;
+        }
+
+        .top-bar .divider {
+            width: 1px;
+            height: 20px;
+            background: rgba(255, 255, 255, 0.3);
+        }
+
+        .top-bar a {
+            color: var(--white);
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .top-bar a:hover {
+            color: var(--gold);
+        }
+
+        .top-bar i {
+            margin-right: 0;
+        }
+
+        /* Navigation */
+        .navbar {
+            background: var(--white);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            position: fixed;
+            width: 100%;
+            top: 40px;
+            z-index: 1000;
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem var(--spacing-sm);
+        }
+
+        .logo-container {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            text-decoration: none;
+        }
+
+        .logo-img {
+            height: 50px;
+            width: auto;
+        }
+
+        .logo-text {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary-blue);
+        }
+
+        .nav-menu {
+            display: flex;
+            list-style: none;
+            gap: var(--spacing-md);
+        }
+
+        .nav-menu a {
+            text-decoration: none;
+            color: var(--dark-gray);
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .nav-menu a:hover {
+            color: var(--primary-blue);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(44, 56, 146, 0.8), rgba(44, 56, 146, 0.9)), url('https://user-images.strikinglycdn.com/res/hrscywv4p/image/upload/f_auto,q_auto,w_1999/unsplashcom/photo-1622130944926-6e57d833a9d5');
+            background-size: cover;
+            background-position: center;
+            color: var(--white);
+            text-align: center;
+            padding: 3rem var(--spacing-sm) var(--spacing-lg);
+            margin-top: 120px;
+            min-height: 80vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .hero-inner {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 2rem;
+            width: 100%;
+        }
+
+        .hero-text {
+            text-align: center;
+            max-width: 720px;
+        }
+
+        .hero-logo {
+            max-width: 100px;
+            height: auto;
+            margin-bottom: 0.6rem;
+        }
+
+        .hero-content h1 {
+            font-size: 2.2rem;
+            margin-bottom: 0.4rem;
+            color: var(--white);
+        }
+
+        .hero-content p {
+            font-size: 1rem;
+            margin-bottom: 0.6rem;
+        }
+
+        .hero-content .btn-outline {
+            padding: 8px 22px;
+            font-size: 0.9rem;
+        }
+
+        /* Property of the Month */
+        .property-of-month {
+            width: 100%;
+            max-width: 720px;
+            position: relative;
+        }
+
+        .potm-badge {
+            position: absolute;
+            top: -14px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: linear-gradient(135deg, var(--gold) 0%, #f0d060 100%);
+            color: #1a1a1a;
+            padding: 6px 22px;
+            border-radius: 30px;
+            font-weight: 700;
+            font-size: 0.78rem;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            z-index: 2;
+            box-shadow: 0 4px 15px rgba(212, 175, 55, 0.4);
+            white-space: nowrap;
+        }
+
+        .potm-card {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
+            transition: transform 0.4s ease, box-shadow 0.4s ease;
+        }
+
+        .potm-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 16px 48px rgba(0, 0, 0, 0.35);
+        }
+
+        .potm-image-wrap {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .potm-image-wrap img {
+            width: 100%;
+            height: 380px;
+            object-fit: cover;
+            display: block;
+            transition: transform 0.6s ease;
+        }
+
+        .potm-card:hover .potm-image-wrap img {
+            transform: scale(1.05);
+        }
+
+        .potm-image-wrap .price-tag {
+            position: absolute;
+            bottom: 12px;
+            right: 12px;
+            background: var(--gold);
+            color: #1a1a1a;
+            padding: 8px 20px;
+            border-radius: 20px;
+            font-weight: 700;
+            font-size: 1.2rem;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+        }
+
+        .potm-details {
+            padding: 1.2rem 1.4rem;
+            text-align: left;
+        }
+
+        .potm-details h3 {
+            font-size: 1.4rem;
+            margin-bottom: 0.4rem;
+            color: var(--white);
+        }
+
+        .potm-details .potm-location {
+            font-size: 0.88rem;
+            opacity: 0.8;
+            margin-bottom: 0.8rem;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .potm-features {
+            display: flex;
+            gap: 18px;
+            font-size: 0.95rem;
+            opacity: 0.85;
+            margin-bottom: 1rem;
+        }
+
+        .potm-features span {
+            display: flex;
+            align-items: center;
+            gap: 4px;
+        }
+
+        .potm-details .btn {
+            font-size: 0.85rem;
+            padding: 8px 22px;
+        }
+
+        /* Buttons */
+        .btn {
+            display: inline-block;
+            padding: 12px 30px;
+            background: var(--gold);
+            color: var(--dark-gray);
+            text-decoration: none;
+            border-radius: 30px;
+            border: 2px solid var(--gold);
+            transition: all 0.3s;
+            font-weight: 600;
+        }
+
+        .btn:hover {
+            background: transparent;
+            color: var(--gold);
+            border-color: var(--gold);
+        }
+
+        .btn-outline {
+            background: transparent;
+            color: var(--white);
+            border-color: var(--white);
+        }
+
+        .btn-outline:hover {
+            background: var(--white);
+            color: var(--primary-blue);
+            border-color: var(--white);
+        }
+
+        /* Sections */
+        .section {
+            padding: var(--spacing-lg) var(--spacing-sm);
+        }
+
+        .section-dark {
+            background: var(--primary-blue);
+            color: var(--white);
+        }
+
+        .section-light {
+            background: var(--light-gray);
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: var(--spacing-lg);
+        }
+
+        .section-header h2 {
+            font-size: 2.5rem;
+            color: var(--primary-blue);
+        }
+
+        .section-dark .section-header h2 {
+            color: var(--white);
+        }
+
+        /* Services Grid */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: var(--spacing-md);
+            margin-top: var(--spacing-md);
+        }
+
+        .service-card {
+            background: var(--white);
+            padding: var(--spacing-md);
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            transition: transform 0.3s, box-shadow 0.3s;
+            border-top: 4px solid var(--gold);
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+        }
+
+        .service-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 8px;
+            margin-bottom: var(--spacing-sm);
+        }
+
+        /* Properties Grid */
+        .properties-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: var(--spacing-md);
+            margin-top: var(--spacing-md);
+        }
+
+        .property-card {
+            background: var(--white);
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+        }
+
+        .property-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .property-card img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+        }
+
+        .property-info {
+            padding: var(--spacing-sm);
+        }
+
+        /* Testimonials */
+        .testimonials {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: var(--spacing-md);
+            margin-top: var(--spacing-md);
+        }
+
+        .testimonial-card {
+            background: var(--white);
+            padding: var(--spacing-md);
+            border-radius: 10px;
+            text-align: center;
+            border-top: 4px solid var(--gold);
+        }
+
+        .testimonial-card img {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: var(--spacing-sm);
+            border: 3px solid var(--gold);
+        }
+
+        /* Contact Form */
+        .contact-form {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .form-group {
+            margin-bottom: var(--spacing-sm);
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+            color: var(--primary-blue);
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 12px;
+            border: 2px solid #e1e1e1;
+            border-radius: 5px;
+            font-family: inherit;
+            transition: border-color 0.3s;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus {
+            border-color: var(--primary-blue);
+            outline: none;
+        }
+
+        /* Footer */
+        .footer {
+            background: var(--primary-blue);
+            color: var(--white);
+            padding: var(--spacing-lg) var(--spacing-sm);
+            text-align: center;
+        }
+
+        .footer-logo {
+            max-width: 150px;
+            height: auto;
+            margin-bottom: var(--spacing-md);
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: var(--spacing-md);
+            margin-bottom: var(--spacing-md);
+        }
+
+        .footer-section h3 {
+            margin-bottom: var(--spacing-sm);
+            color: var(--gold);
+        }
+
+        .footer-section a {
+            color: var(--white);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .footer-section a:hover {
+            color: var(--gold);
+        }
+
+        /* Pulse animation for POTM badge */
+        @keyframes pulse-gold {
+
+            0%,
+            100% {
+                box-shadow: 0 4px 15px rgba(212, 175, 55, 0.4);
+            }
+
+            50% {
+                box-shadow: 0 4px 25px rgba(212, 175, 55, 0.7);
+            }
+        }
+
+        .potm-badge {
+            animation: pulse-gold 2.5s ease-in-out infinite;
+        }
+
+        /* Mobile Responsive */
+        @media (max-width: 768px) {
+            .nav-menu {
+                display: none;
+            }
+
+            .logo-img {
+                height: 40px;
+            }
+
+            .logo-text {
+                font-size: 1.2rem;
+            }
+
+            .hero-content h1 {
+                font-size: 2rem;
+            }
+
+            .hero-logo {
+                max-width: 150px;
+            }
+
+            .section-header h2 {
+                font-size: 2rem;
+            }
+
+            .hero-content h1 {
+                font-size: 1.8rem;
+            }
+
+            .potm-image-wrap img {
+                height: 260px;
+            }
+
+            .top-bar-inner {
+                gap: 12px;
+                font-size: 0.78rem;
+            }
+
+            .top-bar .contact-item .icon-circle {
+                width: 22px;
+                height: 22px;
+                font-size: 0.65rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .logo-text {
+                display: none;
+            }
+
+            .hero-logo {
+                max-width: 120px;
+            }
+
+            .top-bar-inner {
+                flex-direction: column;
+                gap: 4px;
+            }
+
+            .top-bar {
+                height: auto;
+                padding: 6px var(--spacing-sm);
+            }
+
+            .top-bar .divider {
+                display: none;
+            }
+
+            .navbar {
+                top: auto;
+            }
+        }
+    </style>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;700&family=Nunito:wght@200;300;400;500;600;700;800;900&family=Montserrat:wght@400;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+
+<body>
+    <!-- Top Contact Bar -->
+    <div class="top-bar">
+        <div class="top-bar-inner">
+            <div class="contact-item">
+                <span class="icon-circle"><i class="fas fa-phone-alt"></i></span>
+                <a href="tel:+254700000000">+254 700 000 000</a>
+            </div>
+            <div class="divider"></div>
+            <div class="contact-item">
+                <span class="icon-circle"><i class="fas fa-envelope"></i></span>
+                <a href="mailto:info@sibbs.co.ke">info@sibbs.co.ke</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="#home" class="logo-container">
+                <!-- Update the src path to match your logo file location -->
+                <img src="logo/sibbs-logo.png" alt="SIBBS Logo" class="logo-img">
+                <!-- <span class="logo-text">SIBBS</span> -->
+            </a>
+            <ul class="nav-menu">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#properties">Properties</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="container hero-content">
+            <div class="hero-inner">
+                <!-- Welcome text above -->
+                <div class="hero-text">
+                    <img src="logo/sibbs-logo.png" alt="SIBBS Logo" class="hero-logo">
+                    <h1>Welcome to SIBBS</h1>
+                    <p>Your trusted partner in real estate investment in Kenya</p>
+                </div>
+
+                <!-- Property of the Month — dominant visual -->
+                <div class="property-of-month">
+                    <span class="potm-badge"><i class="fas fa-star"></i>&nbsp; Property of the Month</span>
+                    <div class="potm-card">
+                        <div class="potm-image-wrap">
+                            <img src="images/property-of-month.png" alt="Property of the Month – Luxury Villa in Karen">
+                            <span class="price-tag">KES 45M</span>
+                        </div>
+                        <div class="potm-details">
+                            <h3>Luxury Villa in Karen</h3>
+                            <p class="potm-location"><i class="fas fa-map-marker-alt"></i> Karen, Nairobi</p>
+                            <div class="potm-features">
+                                <span><i class="fas fa-bed"></i> 4 Beds</span>
+                                <span><i class="fas fa-bath"></i> 3 Baths</span>
+                                <span><i class="fas fa-ruler-combined"></i> 4,200 sqft</span>
+                            </div>
+                            <a href="#contact" class="btn">View Details</a>
+                        </div>
+                    </div>
+                </div>
+
+                <a href="#contact" class="btn btn-outline" style="margin-top:0.5rem;">Book a Site Visit</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="section section-light">
+        <div class="container">
+            <div class="section-header">
+                <h2>Our Services</h2>
+                <p>Explore our diverse offerings in real estate</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card">
+                    <img src="https://user-images.strikinglycdn.com/res/hrscywv4p/image/upload/c_clip,w_960,h_720,f_auto,q_auto/unsplashcom/photo-1552789984-56c12a880241"
+                        alt="Property Sales">
+                    <h3>Property Sales</h3>
+                    <p>Find your dream home or investment property with our extensive listings</p>
+                    <a href="#properties" class="btn">View Listings</a>
+                </div>
+                <div class="service-card">
+                    <img src="https://user-images.strikinglycdn.com/res/hrscywv4p/image/upload/c_clip,w_960,h_720,f_auto,q_auto/unsplashcom/photo-1648406062026-88d6ab60c431"
+                        alt="Land Investment">
+                    <h3>Land Investment</h3>
+                    <p>Explore prime land investment opportunities across Kenya for a secure future</p>
+                    <a href="#properties" class="btn">Learn More</a>
+                </div>
+                <div class="service-card">
+                    <img src="https://user-images.strikinglycdn.com/res/hrscywv4p/image/upload/c_clip,w_960,h_720,f_auto,q_auto/unsplashcom/photo-1539114756097-bd88be4fa7f4"
+                        alt="Property Consultancy">
+                    <h3>Property Consultancy</h3>
+                    <p>Benefit from our experienced team providing personalized advice and support</p>
+                    <a href="#contact" class="btn">Get Consultancy</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Properties Section -->
+    <section id="properties" class="section section-dark">
+        <div class="container">
+            <div class="section-header">
+                <h2>Featured Properties</h2>
+                <p>Discover our premium property listings</p>
+            </div>
+            <div class="properties-grid">
+                <div class="property-card">
+                    <img src="https://user-images.strikinglycdn.com/res/hrscywv4p/image/upload/c_clip,w_960,h_720,f_auto,q_auto/unsplashcom/photo-1670410860914-1ddd3e884cf2"
+                        alt="Luxury Apartment">
+                    <div class="property-info">
+                        <h3>Luxury Apartment in Nairobi</h3>
+                        <p>Spacious 3-bedroom apartment with modern amenities in prime location</p>
+                        <a href="#contact" class="btn">Request More Info</a>
+                    </div>
+                </div>
+                <div class="property-card">
+                    <img src="https://user-images.strikinglycdn.com/res/hrscywv4p/image/upload/c_clip,w_960,h_720,f_auto,q_auto/unsplashcom/photo-1581727031269-a065bfb790a8"
+                        alt="Commercial Space">
+                    <div class="property-info">
+                        <h3>Commercial Space in Mombasa</h3>
+                        <p>Prime location for your business with high foot traffic</p>
+                        <a href="#contact" class="btn">Request More Info</a>
+                    </div>
+                </div>
+                <div class="property-card">
+                    <img src="https://user-images.strikinglycdn.com/res/hrscywv4p/image/upload/c_clip,w_960,h_720,f_auto,q_auto/unsplashcom/photo-1648102719094-7875f2d5c917"
+                        alt="Residential Land">
+                    <div class="property-info">
+                        <h3>Residential Land in Kiambu</h3>
+                        <p>Ideal plots for building your dream home in a serene environment</p>
+                        <a href="#contact" class="btn">Request More Info</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2>About SIBBS</h2>
+                <p>Transforming Real Estate in Kenya</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card">
+                    <h3>Our Mission</h3>
+                    <p>To provide superior real estate services while ensuring the best return on investment for our
+                        clients.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Our Values</h3>
+                    <p>Integrity, transparency, and customer satisfaction are at the heart of everything we do.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Our Expertise</h3>
+                    <p>With years of experience in the Kenyan real estate market, we guide you through every step.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="section section-dark">
+        <div class="container">
+            <div class="section-header">
+                <h2>What Our Clients Say</h2>
+                <p>Hear from those who have trusted us with their real estate needs</p>
+            </div>
+            <div class="testimonials">
+                <div class="testimonial-card">
+                    <img src="https://user-images.strikinglycdn.com/res/hrscywv4p/image/upload/c_clip,w_960,h_720,f_auto,q_auto/unsplashcom/photo-1647580427155-0483906cb9de"
+                        alt="John D.">
+                    <h3>John D.</h3>
+                    <p>"SIBBS helped me find the perfect home. Their team was professional and attentive throughout the
+                        process."</p>
+                </div>
+                <div class="testimonial-card">
+                    <img src="https://user-images.strikinglycdn.com/res/hrscywv4p/image/upload/c_clip,w_960,h_720,f_auto,q_auto/unsplashcom/photo-1628239443670-db2d5da8ce4a"
+                        alt="Mary K.">
+                    <h3>Mary K.</h3>
+                    <p>"I invested in land through SIBBS, and it was the best decision. They provided invaluable
+                        guidance."</p>
+                </div>
+                <div class="testimonial-card">
+                    <img src="https://user-images.strikinglycdn.com/res/hrscywv4p/image/upload/c_clip,w_960,h_720,f_auto,q_auto/unsplashcom/photo-1472216346075-a2e0f9c9f005"
+                        alt="David M.">
+                    <h3>David M.</h3>
+                    <p>"Their customer service is top-notch! I felt supported every step of the way."</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section section-light">
+        <div class="container">
+            <div class="section-header">
+                <h2>Get In Touch</h2>
+                <p>Have questions? We're here to help you find the perfect property</p>
+            </div>
+            <div class="contact-form">
+                <form id="contactForm">
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Phone</label>
+                        <input type="tel" id="phone" name="phone">
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="btn">Submit</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <!-- Logo in footer -->
+            <img src="logo/sibbs-logo.png" alt="SIBBS Logo" class="footer-logo">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Contact Information</h3>
+                    <p>Email: info@sibbs.co.ke</p>
+                    <p>Phone: +254 700 000 000</p>
+                    <p>Location: Nairobi, Kenya</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <p><a href="#home">Home</a></p>
+                    <p><a href="#properties">Properties</a></p>
+                    <p><a href="#services">Services</a></p>
+                </div>
+                <div class="footer-section">
+                    <h3>Business Hours</h3>
+                    <p>Monday - Friday: 9:00 AM - 5:00 PM</p>
+                    <p>Saturday: 10:00 AM - 2:00 PM</p>
+                    <p>Sunday: Closed</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 SIBBS Real Estate. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Form submission handling
+        document.getElementById('contactForm').addEventListener('submit', function (e) {
+            e.preventDefault();
+            alert('Thank you for your message! We will get back to you soon.');
+            this.reset();
+        });
+
+        // Navbar background change on scroll
+        window.addEventListener('scroll', function () {
+            const navbar = document.querySelector('.navbar');
+            if (window.scrollY > 100) {
+                navbar.style.background = 'rgba(255, 255, 255, 0.95)';
+            } else {
+                navbar.style.background = 'var(--white)';
+            }
+        });
+    </script>
+</body>
+
+</html>
