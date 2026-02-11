@@ -1,67 +1,169 @@
 "use client";
 
-const properties = [
+import { motion } from "motion/react";
+import {
+  staggerContainer,
+  staggerItem,
+  sectionReveal,
+  viewportConfig,
+} from "@/lib/animations";
+
+interface Property {
+  title: string;
+  price: string;
+  location: string;
+  beds: number;
+  baths: number;
+  sqft: string;
+  tag: string;
+  image: string;
+}
+
+const properties: Property[] = [
   {
     title: "Modern Apartment in Westlands",
     price: "KES 12M",
     location: "Westlands, Nairobi",
+    beds: 3,
+    baths: 2,
+    sqft: "1,800",
+    tag: "For Sale",
+    image:
+      "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=600&h=400&fit=crop",
   },
   {
     title: "Spacious Villa in Kilimani",
     price: "KES 35M",
     location: "Kilimani, Nairobi",
+    beds: 5,
+    baths: 4,
+    sqft: "6,200",
+    tag: "Premium",
+    image:
+      "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=600&h=400&fit=crop",
   },
   {
     title: "Commercial Space in CBD",
     price: "KES 8M",
     location: "CBD, Nairobi",
+    beds: 0,
+    baths: 2,
+    sqft: "3,500",
+    tag: "Commercial",
+    image:
+      "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=600&h=400&fit=crop",
   },
   {
     title: "Land Plot in Nairobi South",
     price: "KES 5M",
     location: "Nairobi South",
+    beds: 0,
+    baths: 0,
+    sqft: "10,000",
+    tag: "Land",
+    image:
+      "https://images.unsplash.com/photo-1500382017468-9049fed747ef?w=600&h=400&fit=crop",
   },
 ];
 
 export default function Properties() {
   return (
-    <section id="properties" className="py-20 px-4 bg-gray-50">
-      <div className="max-w-6xl mx-auto">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold font-raleway text-primary mb-4">
+    <section id="properties" className="py-24 px-4 bg-surface-dim">
+      <div className="max-w-7xl mx-auto">
+        {/* Section heading */}
+        <motion.div
+          className="text-center mb-16"
+          variants={sectionReveal}
+          initial="hidden"
+          whileInView="visible"
+          viewport={viewportConfig}
+        >
+          <span className="inline-block text-gold text-sm font-bold uppercase tracking-[0.2em] mb-3">
+            Browse Our Listings
+          </span>
+          <h2 className="text-4xl md:text-5xl font-extrabold font-raleway text-primary mb-4 tracking-tight">
             Featured Properties
           </h2>
-        </div>
+          <div className="section-divider" />
+        </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-          {properties.map((property, idx) => (
-            <div
-              key={idx}
-              className="bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-2xl hover:-translate-y-1 transition-all duration-300"
+        {/* Property cards */}
+        <motion.div
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6"
+          variants={staggerContainer}
+          initial="hidden"
+          whileInView="visible"
+          viewport={viewportConfig}
+        >
+          {properties.map((property) => (
+            <motion.div
+              key={property.title}
+              variants={staggerItem}
+              className="group bg-white rounded-xl overflow-hidden shadow-md hover:shadow-2xl hover:-translate-y-1.5 transition-all duration-400"
             >
-              <div className="h-48 bg-gradient-to-br from-gray-300 to-gray-400 flex items-center justify-center text-5xl text-gray-500">
-                <i className="fas fa-image"></i>
+              {/* Image */}
+              <div className="relative h-52 overflow-hidden">
+                <img
+                  src={property.image}
+                  alt={property.title}
+                  className="object-cover w-full h-full group-hover:scale-110 transition-transform duration-700"
+                  loading="lazy"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent" />
+
+                {/* Tag badge */}
+                <span className="absolute top-3 left-3 bg-gradient-to-r from-gold to-gold-light text-primary-dark text-xs font-bold uppercase tracking-wider px-3 py-1 rounded-full shadow-md">
+                  {property.tag}
+                </span>
+
+                {/* Price */}
+                <span className="absolute bottom-3 right-3 bg-white/95 backdrop-blur-sm text-primary font-bold text-lg px-3 py-1 rounded-lg shadow-md">
+                  {property.price}
+                </span>
               </div>
-              <div className="p-4">
-                <h3 className="font-bold text-lg font-raleway text-gray-800 mb-2">
+
+              {/* Content */}
+              <div className="p-5">
+                <h3 className="font-bold text-base font-raleway text-gray-900 mb-2 leading-snug">
                   {property.title}
                 </h3>
-                <p className="text-sm text-gray-600 mb-2 flex items-center gap-1">
-                  <i className="fas fa-map-marker-alt"></i> {property.location}
+
+                <p className="text-sm text-gray-500 mb-3 flex items-center gap-1.5">
+                  <i className="fas fa-map-marker-alt text-gold text-xs" />
+                  {property.location}
                 </p>
-                <p className="text-2xl font-bold text-gold mb-4">
-                  {property.price}
-                </p>
+
+                {/* Meta details */}
+                <div className="flex gap-4 text-xs text-gray-400 mb-4 pt-3 border-t border-gray-100">
+                  {property.beds > 0 && (
+                    <span className="flex items-center gap-1">
+                      <i className="fas fa-bed text-primary/40" />
+                      {property.beds} Beds
+                    </span>
+                  )}
+                  {property.baths > 0 && (
+                    <span className="flex items-center gap-1">
+                      <i className="fas fa-bath text-primary/40" />
+                      {property.baths} Baths
+                    </span>
+                  )}
+                  <span className="flex items-center gap-1">
+                    <i className="fas fa-ruler-combined text-primary/40" />
+                    {property.sqft} sqft
+                  </span>
+                </div>
+
                 <a
-                  href="#"
-                  className="inline-block bg-primary text-white px-4 py-2 rounded-full text-sm font-semibold hover:bg-primary/80 transition-colors"
+                  href="#contact"
+                  className="inline-flex items-center gap-2 text-sm font-semibold text-primary hover:text-gold transition-colors duration-200 group/link"
                 >
-                  View Property
+                  View Details
+                  <i className="fas fa-arrow-right text-xs group-hover/link:translate-x-1 transition-transform duration-200" />
                 </a>
               </div>
-            </div>
+            </motion.div>
           ))}
-        </div>
+        </motion.div>
       </div>
     </section>
   );
