@@ -1,15 +1,56 @@
-@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@300;700&family=Nunito:wght@200;300;400;500;600;700;800;900&family=Montserrat:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700;800;900&family=Nunito:wght@200;300;400;500;600;700;800;900&family=Montserrat:wght@400;500;600;700;800&display=swap");
 @import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css");
 
 @import "tailwindcss";
 
 @theme {
-  --color-primary: #2c3892;
+  --color-primary: #1e2a78;
+  --color-primary-light: #2c3892;
+  --color-primary-dark: #141c5a;
   --color-gold: #D4AF37;
+  --color-gold-light: #e4c554;
   --color-secondary: #f8f9fa;
+  --color-surface: #ffffff;
+  --color-surface-dim: #f1f3f8;
 
   --font-sans: "Nunito", "Helvetica", "Arial", sans-serif;
   --font-raleway: "Raleway", sans-serif;
   --font-nunito: "Nunito", sans-serif;
   --font-montserrat: "Montserrat", sans-serif;
+}
+
+/* ─── Base resets & smooth scroll ──────────────────────────── */
+
+html {
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+/* ─── Selection styling ───────────────────────────────────── */
+
+::selection {
+  background-color: #D4AF37;
+  color: #1e2a78;
+}
+
+/* ─── Focus-visible for accessibility ─────────────────────── */
+
+:focus-visible {
+  outline: 2px solid #D4AF37;
+  outline-offset: 2px;
+}
+
+/* ─── Section divider utility ─────────────────────────────── */
+
+.section-divider {
+  width: 60px;
+  height: 3px;
+  background: linear-gradient(90deg, #D4AF37, #e4c554);
+  border-radius: 10px;
+  margin-inline: auto;
 }
