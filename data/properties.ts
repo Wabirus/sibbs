@@ -9,8 +9,9 @@ export const properties: Property[] = [
         price: 340000,
         currency: "$",
         specs: { areaSqM: 300, floors: 1, beds: 6, baths: 2 },
+        // New luxury modern house image
         image:
-            "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=600&h=400&fit=crop",
+            "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=1200&h=800&fit=crop",
         type: "sale",
         isNew: true,
     },

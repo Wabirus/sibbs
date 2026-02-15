@@ -4,9 +4,10 @@
 @import "tailwindcss";
 
 @theme {
-  --color-primary: #1e2a78;
-  --color-primary-light: #2c3892;
-  --color-primary-dark: #141c5a;
+  /* Footer Navy Theme */
+  --color-primary: #141c5a;       /* Deep Navy (was primary-dark) */
+  --color-primary-light: #2c3892; /* Lighter Blue */
+  --color-primary-dark: #0a0e2e;  /* Darker Navy */
   --color-primary-foreground: #ffffff;
 
   --color-gold: #D4AF37;
