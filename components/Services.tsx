@@ -55,7 +55,7 @@ export default function Services() {
     >
       {/* ── Parallax Background ────────────────────────── */}
       <div
-        className="absolute inset-0 z-0 bg-fixed bg-center bg-cover"
+        className="absolute inset-0 z-0 bg-center bg-cover bg-no-repeat bg-fixed bg-opacity-50"
         style={{
           backgroundImage: "url('https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=600&h=400&fit=crop')",
         }}
