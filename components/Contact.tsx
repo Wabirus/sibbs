@@ -70,7 +70,7 @@ export default function Contact() {
   };
 
   return (
-    <section id="contact" className="relative py-24 px-4 flex items-center justify-center overflow-hidden bg-primary-dark">
+    <section id="contact" className="relative py-24 px-4 flex items-center justify-center overflow-hidden bg-primary">
       {/* Background decoration */}
       <div className="absolute inset-0 pointer-events-none">
         <div className="absolute -top-32 -right-32 w-96 h-96 bg-gold/5 rounded-full blur-[100px]" />
@@ -89,11 +89,11 @@ export default function Contact() {
           <span className="inline-block text-gold text-sm font-bold uppercase tracking-[0.2em] mb-3">
             Contact Us
           </span>
-          <h2 className="text-4xl md:text-5xl font-extrabold font-raleway mb-4 tracking-tight text-white">
+          <h2 className="text-4xl md:text-5xl font-extrabold mb-4 tracking-tight text-white">
             Get in Touch
           </h2>
           <div className="section-divider" />
-          <p className="text-lg text-gray-200/80 mt-4 max-w-xl mx-auto font-nunito">
+          <p className="text-lg text-gray-200/80 mt-4 max-w-xl mx-auto">
             Have questions? We&apos;re here to help you find the perfect property.
           </p>
         </motion.div>
@@ -164,7 +164,7 @@ export default function Contact() {
               viewport={viewportConfig}
               transition={springGentle}
             >
-              <h3 className="text-2xl font-bold font-raleway text-gray-900 mb-6">Send us a Message</h3>
+              <h3 className="text-2xl font-bold text-gray-900 mb-6">Send us a Message</h3>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 mb-5">
                 <div>
                   <label

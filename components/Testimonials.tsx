@@ -48,7 +48,7 @@ export default function Testimonials() {
           className="w-full h-full"
           style={{
             backgroundImage:
-              "radial-gradient(circle at 1px 1px, #1e2a78 1px, transparent 0)",
+              "radial-gradient(circle at 1px 1px, #2c3892 1px, transparent 0)",
             backgroundSize: "40px 40px",
           }}
         />
@@ -66,7 +66,7 @@ export default function Testimonials() {
           <span className="inline-block text-gold text-sm font-bold uppercase tracking-[0.2em] mb-3">
             Testimonials
           </span>
-          <h2 className="text-4xl md:text-5xl font-extrabold font-raleway text-primary mb-4 tracking-tight">
+          <h2 className="text-4xl md:text-5xl font-extrabold text-primary mb-4 tracking-tight">
             What Our Clients Say
           </h2>
           <div className="section-divider" />
@@ -94,7 +94,7 @@ export default function Testimonials() {
               </div>
 
               {/* Message */}
-              <p className="text-gray-600 leading-relaxed font-nunito mb-6 mt-2">
+              <p className="text-gray-600 leading-relaxed mb-6 mt-2">
                 &quot;{testimonial.message}&quot;
               </p>
 
@@ -104,7 +104,7 @@ export default function Testimonials() {
                   {testimonial.initials}
                 </div>
                 <div>
-                  <h4 className="text-base font-bold font-raleway text-primary leading-tight">
+                  <h4 className="text-base font-bold text-primary leading-tight">
                     {testimonial.name}
                   </h4>
                   <p className="text-xs font-semibold text-gold uppercase tracking-wide">

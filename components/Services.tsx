@@ -60,7 +60,7 @@ export default function Services() {
           backgroundImage: "url('https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=600&h=400&fit=crop')",
         }}
       >
-        <div className="absolute inset-0 bg-primary-dark/60 backdrop-blur-[2px]" />
+        <div className="absolute inset-0 bg-primary backdrop-blur-[2px]" />
       </div>
 
       <div className="max-w-7xl mx-auto relative z-10 w-full">
@@ -73,13 +73,13 @@ export default function Services() {
           className="bg-white/10 backdrop-blur-md border border-white/20 p-8 md:p-12 rounded-3xl text-center shadow-2xl max-w-4xl mx-auto mb-16"
         >
           <motion.h2
-            className="text-3xl md:text-5xl lg:text-5xl font-extrabold mb-6 font-raleway leading-tight text-white"
+            className="text-3xl md:text-5xl lg:text-5xl font-extrabold mb-6 leading-tight text-white"
           >
             Find a place you<br />
             will call <span className="text-gold">home</span>
           </motion.h2>
           <motion.p
-            className="text-lg text-gray-200 font-nunito max-w-2xl mx-auto leading-relaxed"
+            className="text-lg text-gray-200 max-w-2xl mx-auto leading-relaxed"
           >
             With us you will find not just accommodation, but a place where
             your new life begins, full of coziness and possibilities.
@@ -111,10 +111,10 @@ export default function Services() {
                   <i className={service.icon} />
                 </div>
 
-                <h3 className="text-lg font-bold font-raleway text-white mb-3">
+                <h3 className="text-lg font-bold text-white mb-3">
                   {service.title}
                 </h3>
-                <p className="text-gray-300 text-sm leading-relaxed font-nunito">
+                <p className="text-gray-100 text-sm leading-relaxed">
                   {service.description}
                 </p>
               </div>

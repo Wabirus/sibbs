@@ -28,7 +28,7 @@ export default function Footer() {
 
   return (
     <motion.footer
-      className="bg-primary-dark text-white py-16 px-4"
+      className="bg-primary text-white py-16 px-4"
       variants={fadeUp}
       initial="hidden"
       whileInView="visible"
@@ -45,12 +45,13 @@ export default function Footer() {
           {/* Brand */}
           <motion.div variants={staggerItem} className="md:col-span-1">
             <div className="flex items-center gap-2 mb-4">
-              <span className="w-9 h-9 bg-gradient-to-br from-gold to-gold-light rounded-lg flex items-center justify-center text-primary-dark font-bold text-sm shadow-md">
-                S
-              </span>
-              <span className="text-xl font-extrabold font-montserrat tracking-tight">
-                SIBBS
-              </span>
+              <div className="w-32 h-10 relative">
+                <img
+                  src="/images/sibbs-logo.png"
+                  alt="SIBBS Real Estate"
+                  className="object-contain w-full h-full invert grayscale brightness-150 mix-blend-screen"
+                />
+              </div>
             </div>
             <p className="text-gray-400 text-sm leading-relaxed mb-5">
               Your trusted partner in Kenyan real estate investment.

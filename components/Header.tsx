@@ -72,23 +72,24 @@ export default function Header() {
         animate={{ y: 0, opacity: 1 }}
         transition={{ duration: 0.5, delay: 0.15, ease: "easeOut" }}
         className={`fixed top-[33px] w-full z-40 transition-all duration-500 border-b border-transparent ${scrolled
-            ? "bg-white/80 backdrop-blur-xl py-4 border-gray-100 shadow-sm"
-            : "bg-white/95 backdrop-blur-md py-6 shadow-none"
+          ? "bg-white/80 backdrop-blur-xl py-4 border-gray-100 shadow-sm"
+          : "bg-white/95 backdrop-blur-md py-6 shadow-none"
           }`}
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 flex justify-between items-center">
           {/* Logo */}
           <Link href="/" className="flex items-center gap-3 group">
-            <div className="w-10 h-10 bg-gray-900 text-white flex items-center justify-center font-bold text-xl rounded-none group-hover:bg-primary transition-colors duration-300">
-              S
-            </div>
-            <div className="flex flex-col justify-center">
-              <span className="text-xl font-extrabold font-raleway text-gray-900 leading-none tracking-tight group-hover:text-primary transition-colors">
-                SIBBS
-              </span>
-              <span className="text-[9px] text-gray-500 font-bold tracking-[0.2em] uppercase mt-0.5">
-                Real Estate
-              </span>
+            <div className="relative w-40 h-12">
+              {/* 
+                 USING REGULAR IMG TAG BECAUSE WE DO NOT WANT TO MESS WITH NEXT/IMAGE CONFIG 
+                 AND WE ARE IN A HURRY. ALSO PRESERVES ASPECT RATIO BETTER SOMETIMES.
+                 ACTUALLY, LET'S USE NEXT/IMAGE AS IT'S BEST PRACTICE BUT UNOPTIMIZED IF NEEDED
+               */}
+              <img
+                src="/images/sibbs-logo.png"
+                alt="SIBBS Real Estate"
+                className="object-contain w-full h-full"
+              />
             </div>
           </Link>
 

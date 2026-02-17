@@ -21,9 +21,9 @@ interface Property {
 
 const properties: Property[] = [
   {
-    title: "Modern Apartment in Westlands",
+    title: "Executive Bungalows in Kitengela",
     price: "KES 12M",
-    location: "Westlands, Nairobi",
+    location: "Kitengela, Kenya",
     beds: 3,
     baths: 2,
     sqft: "1,800",
@@ -32,9 +32,9 @@ const properties: Property[] = [
       "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=600&h=400&fit=crop",
   },
   {
-    title: "Spacious Villa in Kilimani",
+    title: "Spacious Maissonette in Thika",
     price: "KES 35M",
-    location: "Kilimani, Nairobi",
+    location: "Thika, Kenya",
     beds: 5,
     baths: 4,
     sqft: "6,200",
@@ -43,9 +43,9 @@ const properties: Property[] = [
       "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=1200&h=800&fit=crop",
   },
   {
-    title: "Commercial Space in CBD",
+    title: "Bungalow in Thika",
     price: "KES 8M",
-    location: "CBD, Nairobi",
+    location: "Thika, Kenya",
     beds: 0,
     baths: 2,
     sqft: "3,500",
@@ -54,7 +54,7 @@ const properties: Property[] = [
       "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=600&h=400&fit=crop",
   },
   {
-    title: "Land Plot in Nairobi South",
+    title: "Upcoming project",
     price: "KES 5M",
     location: "Nairobi South",
     beds: 0,
@@ -81,7 +81,7 @@ export default function Properties() {
           <span className="inline-block text-gold text-sm font-bold uppercase tracking-[0.2em] mb-3">
             Browse Our Listings
           </span>
-          <h2 className="text-4xl md:text-5xl font-extrabold font-raleway text-primary mb-4 tracking-tight">
+          <h2 className="text-4xl md:text-5xl font-extrabold text-primary mb-4 tracking-tight">
             Featured Properties
           </h2>
           <div className="section-divider" />
@@ -124,7 +124,7 @@ export default function Properties() {
 
               {/* Content */}
               <div className="p-5">
-                <h3 className="font-bold text-base font-raleway text-gray-900 mb-2 leading-snug">
+                <h3 className="font-bold text-base text-gray-900 mb-2 leading-snug">
                   {property.title}
                 </h3>
 
@@ -137,18 +137,18 @@ export default function Properties() {
                 <div className="flex gap-4 text-xs text-gray-400 mb-4 pt-3 border-t border-gray-100">
                   {property.beds > 0 && (
                     <span className="flex items-center gap-1">
-                      <i className="fas fa-bed text-primary/40" />
+                      <i className="fas fa-bed text-primary" />
                       {property.beds} Beds
                     </span>
                   )}
                   {property.baths > 0 && (
                     <span className="flex items-center gap-1">
-                      <i className="fas fa-bath text-primary/40" />
+                      <i className="fas fa-bath text-primary" />
                       {property.baths} Baths
                     </span>
                   )}
                   <span className="flex items-center gap-1">
-                    <i className="fas fa-ruler-combined text-primary/40" />
+                    <i className="fas fa-ruler-combined text-primary" />
                     {property.sqft} sqft
                   </span>
                 </div>

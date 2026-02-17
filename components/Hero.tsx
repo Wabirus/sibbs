@@ -37,7 +37,7 @@ export default function Hero() {
             <span className="inline-block bg-gold text-primary-dark text-xs font-bold uppercase tracking-wider px-3 py-1 rounded-full mb-4">
               Property of the Month
             </span>
-            <h1 className="text-4xl md:text-6xl font-extrabold font-raleway text-white mb-4 leading-tight">
+            <h1 className="text-4xl md:text-6xl font-extrabold text-white mb-4 leading-tight">
               The Oceanview <br />
               <span className="text-gold">Penthouse</span>
             </h1>
