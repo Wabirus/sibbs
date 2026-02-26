@@ -1,10 +1,11 @@
 "use client";
 
+import Link from "next/link";
+import Image from "next/image";
 import { motion } from "motion/react";
 import {
   staggerContainer,
   staggerItem,
-  sectionReveal,
   viewportConfig,
 } from "@/lib/animations";
 
@@ -17,52 +18,55 @@ interface Property {
   sqft: string;
   tag: string;
   image: string;
+  slug?: string;
 }
 
 const properties: Property[] = [
   {
-    title: "Executive Bungalows in Kitengela",
-    price: "KES 12M",
-    location: "Kitengela, Kenya",
-    beds: 3,
-    baths: 2,
-    sqft: "1,800",
+    title: "4 Bedroom + DSQ Maisonette in Thika",
+    price: "KES 20M",
+    location: "Thika Landless, Kiambu",
+    beds: 4,
+    baths: 4,
+    sqft: "333 m²",
     tag: "For Sale",
     image:
-      "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=600&h=400&fit=crop",
+      "/properties/maisonette-in-thika/aerial-view.jpg",
+    slug: "maisonette-in-thika",
   },
   {
-    title: "Spacious Maissonette in Thika",
-    price: "KES 35M",
-    location: "Thika, Kenya",
-    beds: 5,
-    baths: 4,
-    sqft: "6,200",
-    tag: "Premium",
+    title: "3 Bedroom + DSQ in Kitengela",
+    price: "Contact Us",
+    location: "Kitengela, Kajiado",
+    beds: 3,
+    baths: 3,
+    sqft: "179 m²",
+    tag: "For Sale",
     image:
-      "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=1200&h=800&fit=crop",
+      "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=600&h=400&fit=crop",
+    slug: "bungalows-in-kitengela",
   },
   {
-    title: "Bungalow in Thika",
-    price: "KES 8M",
-    location: "Thika, Kenya",
-    beds: 0,
+    title: "4 Bedroom Bungalow in Thika",
+    price: "SOLD",
+    location: "Thika Landless, Kiambu",
+    beds: 4,
     baths: 2,
-    sqft: "3,500",
-    tag: "Commercial",
+    sqft: "—",
+    tag: "Sold",
     image:
-      "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=600&h=400&fit=crop",
+      "https://images.unsplash.com/photo-1568605114967-8130f3a36994?w=600&h=400&fit=crop",
   },
   {
-    title: "Upcoming project",
-    price: "KES 5M",
-    location: "Nairobi South",
+    title: "Upcoming Project",
+    price: "Starting KES 4M",
+    location: "Kenya",
     beds: 0,
     baths: 0,
-    sqft: "10,000",
-    tag: "Land",
+    sqft: "TBA",
+    tag: "Coming Soon",
     image:
-      "https://images.unsplash.com/photo-1500382017468-9049fed747ef?w=600&h=400&fit=crop",
+      "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=600&h=400&fit=crop",
   },
 ];
 
@@ -70,23 +74,6 @@ export default function Properties() {
   return (
     <section id="properties" className="py-24 px-4 bg-surface-dim">
       <div className="max-w-7xl mx-auto">
-        {/* Section heading */}
-        <motion.div
-          className="text-center mb-16"
-          variants={sectionReveal}
-          initial="hidden"
-          whileInView="visible"
-          viewport={viewportConfig}
-        >
-          <span className="inline-block text-gold text-sm font-bold uppercase tracking-[0.2em] mb-3">
-            Browse Our Listings
-          </span>
-          <h2 className="text-4xl md:text-5xl font-extrabold text-primary mb-4 tracking-tight">
-            Featured Properties
-          </h2>
-          <div className="section-divider" />
-        </motion.div>
-
         {/* Property cards */}
         <motion.div
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6"
@@ -103,10 +90,12 @@ export default function Properties() {
             >
               {/* Image */}
               <div className="relative h-52 overflow-hidden">
-                <img
+                <Image
                   src={property.image}
                   alt={property.title}
-                  className="object-cover w-full h-full group-hover:scale-110 transition-transform duration-700"
+                  fill
+                  sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 25vw"
+                  className="object-cover group-hover:scale-110 transition-transform duration-700"
                   loading="lazy"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent" />
@@ -124,7 +113,7 @@ export default function Properties() {
 
               {/* Content */}
               <div className="p-5">
-                <h3 className="font-bold text-base text-gray-900 mb-2 leading-snug">
+                <h3 className="font-bold text-base font-raleway text-gray-900 mb-2 leading-snug">
                   {property.title}
                 </h3>
 
@@ -137,29 +126,39 @@ export default function Properties() {
                 <div className="flex gap-4 text-xs text-gray-400 mb-4 pt-3 border-t border-gray-100">
                   {property.beds > 0 && (
                     <span className="flex items-center gap-1">
-                      <i className="fas fa-bed text-primary" />
+                      <i className="fas fa-bed text-primary/40" />
                       {property.beds} Beds
                     </span>
                   )}
                   {property.baths > 0 && (
                     <span className="flex items-center gap-1">
-                      <i className="fas fa-bath text-primary" />
+                      <i className="fas fa-bath text-primary/40" />
                       {property.baths} Baths
                     </span>
                   )}
                   <span className="flex items-center gap-1">
-                    <i className="fas fa-ruler-combined text-primary" />
+                    <i className="fas fa-ruler-combined text-primary/40" />
                     {property.sqft} sqft
                   </span>
                 </div>
 
-                <a
-                  href="#contact"
-                  className="inline-flex items-center gap-2 text-sm font-semibold text-primary hover:text-gold transition-colors duration-200 group/link"
-                >
-                  View Details
-                  <i className="fas fa-arrow-right text-xs group-hover/link:translate-x-1 transition-transform duration-200" />
-                </a>
+                {property.slug ? (
+                  <Link
+                    href={`/properties/${property.slug}`}
+                    className="inline-flex items-center gap-2 text-sm font-semibold text-primary hover:text-gold transition-colors duration-200 group/link"
+                  >
+                    View Details
+                    <i className="fas fa-arrow-right text-xs group-hover/link:translate-x-1 transition-transform duration-200" />
+                  </Link>
+                ) : (
+                  <a
+                    href="#contact"
+                    className="inline-flex items-center gap-2 text-sm font-semibold text-primary hover:text-gold transition-colors duration-200 group/link"
+                  >
+                    {property.tag === "Coming Soon" ? "Get Notified" : property.tag === "Sold" ? "Contact Us" : "View Details"}
+                    <i className="fas fa-arrow-right text-xs group-hover/link:translate-x-1 transition-transform duration-200" />
+                  </a>
+                )}
               </div>
             </motion.div>
           ))}

@@ -54,8 +54,8 @@ export default function Footer() {
               </div>
             </div>
             <p className="text-gray-400 text-sm leading-relaxed mb-5">
-              Your trusted partner in Kenyan real estate investment.
-              Premium properties, smart investments, expert advice.
+              Building residencies, building legacies. Your trusted partner
+              for affordable, high-quality residential housing in Kenya.
             </p>
             {/* Social icons */}
             <div className="flex gap-2">
@@ -99,10 +99,8 @@ export default function Footer() {
             </h3>
             <ul className="space-y-2.5">
               {[
+                "Property Development & Construction",
                 "Property Sales",
-                "Land Investment",
-                "Rental Management",
-                "Consultancy",
               ].map((service) => (
                 <li key={service}>
                   <a

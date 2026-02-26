@@ -2,27 +2,36 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { motion, AnimatePresence } from "motion/react";
-import { usePathname } from "next/navigation";
+import { fadeIn, springSnappy } from "@/lib/animations";
 
 const navItems = [
-  { href: "/", label: "Home" },
-  { href: "/properties", label: "Properties" },
-  { href: "/mortgage", label: "Mortgage" },
-  { href: "/about", label: "Company" },
-  { href: "/careers", label: "Careers" },
-  { href: "/blog", label: "Blog" },
+  { href: "#home", label: "Home" },
+  { href: "#properties", label: "Properties" },
+  { href: "#services", label: "Services" },
+  { href: "#about", label: "About" },
+  { href: "#testimonials", label: "Testimonials" },
+  { href: "#contact", label: "Contact" },
 ];
 
 export default function Header() {
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
-  const pathname = usePathname();
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 40);
     window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
+  }, []);
+
+  // Close mobile menu on resize past breakpoint
+  useEffect(() => {
+    const onResize = () => {
+      if (window.innerWidth >= 768) setMobileOpen(false);
+    };
+    window.addEventListener("resize", onResize, { passive: true });
+    return () => window.removeEventListener("resize", onResize);
   }, []);
 
   return (
@@ -32,37 +41,28 @@ export default function Header() {
         initial={{ y: -40, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         transition={{ duration: 0.5, ease: "easeOut" }}
-        className="fixed top-0 w-full z-50 bg-gray-900 text-white py-2 px-4 border-b border-gray-800"
+        className="fixed top-0 w-full z-50 bg-gradient-to-r from-primary-dark via-primary to-primary-light border-b border-gold/30 text-white py-2 px-4"
       >
-        <div className="max-w-7xl mx-auto flex justify-between items-center text-xs font-medium tracking-wide">
-          <div className="flex items-center gap-6">
-            <a
-              href="mailto:info@sibbs.co.ke"
-              className="flex items-center gap-2 hover:text-primary transition-colors"
-            >
-              <i className="fas fa-envelope text-primary" />
-              <span>info@sibbs.co.ke</span>
-            </a>
-            <span className="hidden sm:inline text-gray-600">|</span>
-            <a
-              href="tel:+254700000000"
-              className="hidden sm:flex items-center gap-2 hover:text-primary transition-colors"
-            >
-              <i className="fas fa-phone-alt text-primary" />
-              <span>+254 700 000 000</span>
-            </a>
-          </div>
-          <div className="flex gap-4">
-            <a href="#" className="hover:text-primary transition-colors">
-              <i className="fab fa-instagram" />
-            </a>
-            <a href="#" className="hover:text-primary transition-colors">
-              <i className="fab fa-linkedin-in" />
-            </a>
-            <a href="#" className="hover:text-primary transition-colors">
-              <i className="fab fa-twitter" />
-            </a>
-          </div>
+        <div className="max-w-7xl mx-auto flex justify-center items-center gap-8 text-sm">
+          <a
+            href="tel:+254700000000"
+            className="flex items-center gap-2 hover:text-gold transition-colors duration-200"
+          >
+            <span className="flex items-center justify-center w-5 h-5 bg-white/10 rounded-full text-[10px]">
+              <i className="fas fa-phone-alt" />
+            </span>
+            +254 700 000 000
+          </a>
+          <div className="w-px h-4 bg-white/20" />
+          <a
+            href="mailto:info@sibbs.co.ke"
+            className="flex items-center gap-2 hover:text-gold transition-colors duration-200"
+          >
+            <span className="flex items-center justify-center w-5 h-5 bg-white/10 rounded-full text-[10px]">
+              <i className="fas fa-envelope" />
+            </span>
+            info@sibbs.co.ke
+          </a>
         </div>
       </motion.div>
 
@@ -71,111 +71,106 @@ export default function Header() {
         initial={{ y: -20, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         transition={{ duration: 0.5, delay: 0.15, ease: "easeOut" }}
-        className={`fixed top-[33px] w-full z-40 transition-all duration-500 border-b border-transparent ${scrolled
-          ? "bg-white/80 backdrop-blur-xl py-4 border-gray-100 shadow-sm"
-          : "bg-white/95 backdrop-blur-md py-6 shadow-none"
+        className={`fixed top-[36px] w-full z-40 transition-all duration-300 ${scrolled
+          ? "bg-white/95 backdrop-blur-md shadow-lg shadow-primary/5"
+          : "bg-white shadow-sm"
           }`}
       >
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 flex justify-between items-center">
-          {/* Logo */}
-          <Link href="/" className="flex items-center gap-3 group">
-            <div className="relative w-40 h-12">
-              {/* 
-                 USING REGULAR IMG TAG BECAUSE WE DO NOT WANT TO MESS WITH NEXT/IMAGE CONFIG 
-                 AND WE ARE IN A HURRY. ALSO PRESERVES ASPECT RATIO BETTER SOMETIMES.
-                 ACTUALLY, LET'S USE NEXT/IMAGE AS IT'S BEST PRACTICE BUT UNOPTIMIZED IF NEEDED
-               */}
-              <img
-                src="/images/sibbs-logo.png"
+        <div className="max-w-7xl mx-auto px-4 sm:px-6">
+          <div className="flex justify-between items-center py-3">
+            {/* Logo */}
+            <Link href="#home" className="flex items-center group">
+              <Image
+                src="/logo.png"
                 alt="SIBBS Real Estate"
-                className="object-contain w-full h-full"
+                width={120}
+                height={40}
+                className="h-10 w-auto group-hover:opacity-90 transition-opacity duration-200"
+                priority
               />
-            </div>
-          </Link>
-
-          {/* Desktop Menu */}
-          <div className="hidden lg:flex items-center gap-8">
-            {navItems.map((item) => {
-              const isActive =
-                pathname === item.href ||
-                (item.href !== "/" && pathname?.startsWith(item.href));
-              return (
-                <Link
-                  key={item.href}
-                  href={item.href}
-                  className={`text-sm font-bold tracking-wide transition-all duration-300 relative py-2 group ${isActive ? "text-primary" : "text-gray-600 hover:text-gray-900"
-                    }`}
-                >
-                  {item.label}
-                  <span
-                    className={`absolute bottom-0 left-0 w-full h-0.5 bg-primary transform origin-left transition-transform duration-300 ${isActive ? "scale-x-100" : "scale-x-0 group-hover:scale-x-100"
-                      }`}
-                  ></span>
-                </Link>
-              );
-            })}
-          </div>
-
-          {/* Action Button */}
-          <div className="hidden lg:flex items-center">
-            <Link
-              href="/contact"
-              className="bg-gray-900 text-white px-7 py-3 rounded-full text-xs font-bold uppercase tracking-wider hover:bg-gray-800 transition-all hover:shadow-lg hover:-translate-y-0.5"
-            >
-              Book a Call
             </Link>
-          </div>
 
-          {/* Mobile hamburger */}
-          <button
-            onClick={() => setMobileOpen(!mobileOpen)}
-            className="lg:hidden flex flex-col items-center justify-center w-10 h-10 rounded-lg hover:bg-gray-100 transition-colors"
-          >
-            <motion.span
-              animate={mobileOpen ? { rotate: 45, y: 6 } : { rotate: 0, y: 0 }}
-              className="block w-6 h-0.5 bg-gray-900 mb-1.5 origin-center"
-            />
-            <motion.span
-              animate={mobileOpen ? { opacity: 0, x: -10 } : { opacity: 1, x: 0 }}
-              className="block w-6 h-0.5 bg-gray-900 mb-1.5"
-            />
-            <motion.span
-              animate={mobileOpen ? { rotate: -45, y: -6 } : { rotate: 0, y: 0 }}
-              className="block w-6 h-0.5 bg-gray-900 origin-center"
-            />
-          </button>
+            {/* Desktop nav links */}
+            <ul className="hidden md:flex list-none gap-1">
+              {navItems.map((item) => (
+                <li key={item.href}>
+                  <a
+                    href={item.href}
+                    className="relative px-4 py-2 text-[15px] font-semibold text-gray-600 hover:text-primary transition-colors duration-200 rounded-lg hover:bg-primary/5"
+                  >
+                    {item.label}
+                  </a>
+                </li>
+              ))}
+            </ul>
+
+            {/* Desktop CTA */}
+            <a
+              href="#contact"
+              className="hidden md:inline-flex items-center gap-2 bg-gradient-to-r from-gold to-gold-light text-primary-dark px-5 py-2 rounded-full text-sm font-bold hover:shadow-lg hover:shadow-gold/25 transition-all duration-300 hover:-translate-y-px"
+            >
+              <i className="fas fa-phone-alt text-xs" />
+              Get a Quote
+            </a>
+
+            {/* Mobile hamburger */}
+            <button
+              onClick={() => setMobileOpen((o) => !o)}
+              className="md:hidden flex flex-col items-center justify-center w-10 h-10 rounded-lg hover:bg-primary/5 transition-colors"
+              aria-label="Toggle navigation"
+            >
+              <motion.span
+                animate={mobileOpen ? { rotate: 45, y: 6 } : { rotate: 0, y: 0 }}
+                className="block w-5 h-0.5 bg-primary mb-1.5 origin-center"
+              />
+              <motion.span
+                animate={mobileOpen ? { opacity: 0, x: -10 } : { opacity: 1, x: 0 }}
+                className="block w-5 h-0.5 bg-primary mb-1.5"
+              />
+              <motion.span
+                animate={mobileOpen ? { rotate: -45, y: -6 } : { rotate: 0, y: 0 }}
+                className="block w-5 h-0.5 bg-primary origin-center"
+              />
+            </button>
+          </div>
         </div>
 
         {/* Mobile menu panel */}
         <AnimatePresence>
           {mobileOpen && (
             <motion.div
-              initial={{ opacity: 0, height: 0 }}
-              animate={{ opacity: 1, height: "auto" }}
-              exit={{ opacity: 0, height: 0 }}
-              className="lg:hidden bg-white border-t border-gray-100 overflow-hidden shadow-xl"
+              variants={fadeIn}
+              initial="hidden"
+              animate="visible"
+              exit="hidden"
+              transition={springSnappy}
+              className="md:hidden bg-white border-t border-gray-100 shadow-lg"
             >
-              <ul className="px-6 py-8 space-y-4">
-                {navItems.map((item) => (
-                  <li key={item.href}>
-                    <Link
+              <ul className="px-4 py-4 space-y-1">
+                {navItems.map((item, idx) => (
+                  <motion.li
+                    key={item.href}
+                    initial={{ opacity: 0, x: -16 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    transition={{ delay: idx * 0.05 }}
+                  >
+                    <a
                       href={item.href}
                       onClick={() => setMobileOpen(false)}
-                      className={`block text-lg font-bold ${pathname === item.href ? "text-primary" : "text-gray-900"
-                        }`}
+                      className="block px-4 py-2.5 text-gray-700 font-semibold rounded-lg hover:bg-primary/5 hover:text-primary transition-colors"
                     >
                       {item.label}
-                    </Link>
-                  </li>
+                    </a>
+                  </motion.li>
                 ))}
-                <li className="pt-6">
-                  <Link
-                    href="/contact"
+                <li className="pt-2">
+                  <a
+                    href="#contact"
                     onClick={() => setMobileOpen(false)}
-                    className="block w-full text-center bg-gray-900 text-white py-4 rounded-xl font-bold uppercase tracking-wider text-sm"
+                    className="block text-center bg-gradient-to-r from-gold to-gold-light text-primary-dark px-5 py-2.5 rounded-full font-bold text-sm"
                   >
-                    Book a Call
-                  </Link>
+                    Get a Quote
+                  </a>
                 </li>
               </ul>
             </motion.div>

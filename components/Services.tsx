@@ -18,32 +18,18 @@ interface Service {
 
 const services: Service[] = [
   {
-    title: "Property Sales",
+    title: "Property Development & Construction",
     description:
-      "Find your dream property from our extensive portfolio of prime real estate opportunities across Kenya.",
-    icon: "fas fa-home",
+      "SIBBS is a property developer focused on building and selling residential homes. Our flagship developments in Thika reflect our commitment to quality construction, strategic locations and functional architectural design. We work with qualified architects, engineers, contractors and interior and exterior designers to ensure durable and high-quality homes.",
+    icon: "fas fa-hard-hat",
     accent: "from-gold/20 to-gold/5",
   },
   {
-    title: "Land Investment",
+    title: "Property Sales",
     description:
-      "Secure your future with high-return land investment opportunities in premium, fast-growing locations.",
-    icon: "fas fa-chart-line",
+      "We offer both off-plan and completed properties tailored for homeowners and property investors seeking quality, value and long-term returns. We are committed to maintaining the highest standards of diligence, professionalism and excellence across our projects. Our off-plan developments are delivered as promised – on schedule and to the agreed specifications.",
+    icon: "fas fa-home",
     accent: "from-emerald-500/20 to-emerald-500/5",
-  },
-  {
-    title: "Rental Management",
-    description:
-      "Hassle-free property management services to maximize your rental income with zero stress.",
-    icon: "fas fa-building",
-    accent: "from-blue-400/20 to-blue-400/5",
-  },
-  {
-    title: "Consultancy",
-    description:
-      "Expert advice and guidance on real estate investments, market trends, and property valuation.",
-    icon: "fas fa-handshake",
-    accent: "from-purple-400/20 to-purple-400/5",
   },
 ];
 
@@ -88,7 +74,7 @@ export default function Services() {
 
         {/* Service cards */}
         <motion.div
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6"
+          className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto"
           variants={staggerContainer}
           initial="hidden"
           whileInView="visible"

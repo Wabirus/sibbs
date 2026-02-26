@@ -3,15 +3,17 @@ import "@fortawesome/fontawesome-free/css/all.min.css";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "SIBBS Real Estate — Premium Properties in Kenya",
+  title: "SIBBS Real Estate — Building Residencies, Building Legacies",
   description:
-    "Your trusted partner in real estate investment in Kenya. Discover premium properties, smart land investments, and expert consultancy.",
+    "SIBBS is a trusted real estate company in Kenya providing suitable residential housing solutions that are affordable and of high-quality standards. Whether you are a first-time homeowner, upgrading to your dream home, or investing in property, SIBBS provides solutions tailored to your needs.",
   keywords: [
     "Kenya real estate",
-    "property investment",
-    "land for sale Kenya",
-    "SIBBS",
-    "Nairobi properties",
+    "residential housing Kenya",
+    "affordable homes Kenya",
+    "Thika properties",
+    "SIBBS real estate",
+    "property development Kenya",
+    "homes for sale Kenya",
   ],
 };
 
