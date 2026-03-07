@@ -17,6 +17,7 @@ const config: Config = {
         raleway: ["Raleway", "sans-serif"],
         nunito: ["Nunito", "sans-serif"],
         montserrat: ["Montserrat", "sans-serif"],
+        georgia: ["'Georgia Pro'", "Georgia", "serif"],
       },
     },
   },

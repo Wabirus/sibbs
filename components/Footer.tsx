@@ -123,20 +123,20 @@ export default function Footer() {
             <ul className="space-y-3">
               <li>
                 <a
-                  href="tel:+254700000000"
+                  href="tel:+254743363186"
                   className="flex items-center gap-2.5 text-gray-400 hover:text-gold transition-colors text-sm"
                 >
                   <i className="fas fa-phone-alt text-gold/60 text-xs" />
-                  +254 700 000 000
+                  +254 7433 63186
                 </a>
               </li>
               <li>
                 <a
-                  href="mailto:info@sibbs.co.ke"
+                  href="mailto:info@wearesibbs.com"
                   className="flex items-center gap-2.5 text-gray-400 hover:text-gold transition-colors text-sm"
                 >
                   <i className="fas fa-envelope text-gold/60 text-xs" />
-                  info@sibbs.co.ke
+                  info@wearesibbs.com
                 </a>
               </li>
               <li className="flex items-center gap-2.5 text-gray-400 text-sm">
@@ -145,7 +145,7 @@ export default function Footer() {
               </li>
               <li className="flex items-center gap-2.5 text-gray-400 text-sm">
                 <i className="fas fa-clock text-gold/60 text-xs" />
-                Mon – Fri, 8am – 6pm
+                Mon – Fri, 8am – 5pm | Sat 9am – 1pm
               </li>
             </ul>
           </motion.div>

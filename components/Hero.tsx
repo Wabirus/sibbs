@@ -1,206 +1,119 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 import { motion } from "motion/react";
 import {
   fadeUp,
-  scaleUp,
-  slideLeft,
-  slideRight,
   staggerContainer,
   staggerItem,
   springGentle,
-  viewportConfig,
 } from "@/lib/animations";
 
-const trustIndicators = [
-  { icon: "fas fa-shield-alt", label: "Licensed & Registered" },
-  { icon: "fas fa-handshake", label: "500+ Happy Clients" },
-  { icon: "fas fa-map-marked-alt", label: "Properties Across Kenya" },
-  { icon: "fas fa-clock", label: "10+ Years Experience" },
+interface PortfolioColumn {
+  image: string;
+  title: string;
+  description: string;
+  href: string;
+}
+
+const portfolioColumns: PortfolioColumn[] = [
+  {
+    image: "/properties/maisonette-in-thika/front-view.jpg",
+    title: "Thika | Maisonnete",
+    description:
+      "Explore our premium 4-bedroom + DSQ maisonettes in Thika, designed for modern family living with spacious layouts and quality finishes.",
+    href: "/properties/maisonette-in-thika",
+  },
+  {
+    image: "/properties/bungalows-in-kitengela/kitengela-bungalow.png",
+    title: "Kitengela | Bungalow",
+    description:
+      "Discover our 3-bedroom + DSQ bungalows in Kitengela, offering comfortable and affordable homes in a fast-growing area.",
+    href: "/properties/bungalows-in-kitengela",
+  },
+  {
+    image: "/properties/maisonette-in-thika/aerial-view.jpg",
+    title: "Thika | Bungalow",
+    description:
+      "Get started on building your dream home with our upcoming developments. Register your interest today for early access.",
+    href: "#contact",
+  },
 ];
 
 export default function Hero() {
   return (
     <section
       id="home"
-      className="relative min-h-screen bg-cover bg-center bg-no-repeat pt-28 pb-16 flex items-center text-white overflow-hidden"
-      style={{
-        backgroundImage:
-          "linear-gradient(135deg, rgba(20, 28, 90, 0.92), rgba(30, 42, 120, 0.8), rgba(44, 56, 146, 0.7)), url('https://images.unsplash.com/photo-1622130944926-6e57d833a9d5?w=2000&h=1000')",
-      }}
+      className="bg-white pt-28 pb-12 overflow-hidden"
     >
-      {/* Decorative orbs */}
-      <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <div className="absolute -top-40 -left-40 w-[500px] h-[500px] bg-gold/8 rounded-full blur-[100px]" />
-        <div className="absolute -bottom-48 -right-48 w-[600px] h-[600px] bg-white/5 rounded-full blur-[120px]" />
-        <div className="absolute top-1/2 left-1/3 w-72 h-72 bg-primary-light/10 rounded-full blur-[80px]" />
-      </div>
-
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 w-full relative z-10">
-        <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-20">
-          {/* ─── Left — Text Content ────────────────────────── */}
-          <motion.div
-            className="flex-1 text-center lg:text-left"
-            variants={staggerContainer}
-            initial="hidden"
-            animate="visible"
-          >
-            {/* Badge */}
-            <motion.span
-              variants={fadeUp}
-              transition={springGentle}
-              className="inline-flex items-center gap-2 bg-white/8 border border-white/15 text-gold px-5 py-2 rounded-full text-sm font-semibold tracking-wide mb-8 backdrop-blur-sm"
-            >
-              <span className="w-2 h-2 bg-gold rounded-full animate-pulse" />
-              Building Residencies, Building Legacies
-            </motion.span>
-
-            {/* Heading */}
-            <motion.h1
-              variants={fadeUp}
-              transition={{ ...springGentle, delay: 0.1 }}
-              className="text-4xl md:text-5xl lg:text-[3.5rem] xl:text-6xl font-extrabold mb-6 font-raleway leading-[1.1] tracking-tight"
-            >
-              Building <span className="text-gold">Residencies</span>,
-              <br />
-              Building <span className="text-gold">Legacies</span>
-            </motion.h1>
-
-            {/* Subtitle */}
-            <motion.p
-              variants={fadeUp}
-              transition={{ ...springGentle, delay: 0.2 }}
-              className="text-lg md:text-xl text-gray-200/90 font-nunito mb-10 max-w-xl mx-auto lg:mx-0 leading-relaxed"
-            >
-              SIBBS is a trusted real estate company in Kenya providing
-              affordable, high-quality residential housing solutions. Whether
-              you are a first-time homeowner, upgrading to your dream home, or
-              investing in property, we provide solutions tailored to your needs.
-            </motion.p>
-
-            {/* CTA buttons */}
-            <motion.div
-              variants={fadeUp}
-              transition={{ ...springGentle, delay: 0.3 }}
-              className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start"
-            >
-              <a
-                href="#properties"
-                className="inline-flex items-center justify-center gap-2.5 bg-gradient-to-r from-gold to-gold-light text-gray-900 px-8 py-3.5 rounded-full font-bold text-base hover:shadow-xl hover:shadow-gold/30 transition-all duration-300 hover:-translate-y-0.5"
-              >
-                <i className="fas fa-building text-sm" /> Explore Properties
-              </a>
-              <a
-                href="#contact"
-                className="inline-flex items-center justify-center gap-2.5 bg-white/8 border border-white/25 text-white px-8 py-3.5 rounded-full font-semibold text-base hover:bg-white/15 transition-all duration-300 backdrop-blur-sm hover:-translate-y-0.5"
-              >
-                <i className="fas fa-phone-alt text-sm" /> Get in Touch
-              </a>
-            </motion.div>
-          </motion.div>
-
-          {/* ─── Right — Property of the Month Card ─────────── */}
-          <motion.div
-            className="flex-1 w-full max-w-md lg:max-w-lg"
-            variants={slideRight}
-            initial="hidden"
-            animate="visible"
-            transition={{ ...springGentle, delay: 0.35 }}
-          >
-            <div className="relative">
-              {/* Featured badge */}
-              <div className="absolute -top-3 left-1/2 -translate-x-1/2 z-20">
-                <motion.span
-                  initial={{ scale: 0, opacity: 0 }}
-                  animate={{ scale: 1, opacity: 1 }}
-                  transition={{ ...springGentle, delay: 0.6 }}
-                  className="inline-flex items-center gap-1.5 bg-gradient-to-r from-gold to-gold-light text-gray-900 px-5 py-2 rounded-full font-bold text-xs uppercase tracking-wider shadow-lg"
-                >
-                  <i className="fas fa-star text-[10px]" /> Property of the Month
-                </motion.span>
-              </div>
-
-              {/* Card */}
-              <div className="bg-white/8 backdrop-blur-xl border border-white/15 rounded-2xl overflow-hidden shadow-2xl hover:shadow-[0_32px_64px_-12px_rgba(0,0,0,0.4)] transition-all duration-500 hover:-translate-y-1 group">
-                {/* Image */}
-                <div className="relative h-56 md:h-64 overflow-hidden">
-                  <Image
-                    src="/properties/maisonette-in-thika/aerial-view.jpg"
-                    alt="Property of the Month – 4 Bedroom + DSQ Maisonette in Thika"
-                    width={800}
-                    height={500}
-                    sizes="(max-width: 768px) 100vw, 500px"
-                    className="object-cover w-full h-full group-hover:scale-105 transition-transform duration-700"
-                    priority
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent" />
-                  <div className="absolute bottom-3 right-3 bg-gradient-to-r from-gold to-gold-light text-gray-900 px-4 py-1.5 rounded-full font-bold text-lg shadow-lg">
-                    KES 20M
-                  </div>
-                </div>
-
-                {/* Details */}
-                <div className="p-5">
-                  <h3 className="text-xl font-bold text-white mb-1.5 font-raleway">
-                    4 Bedroom + DSQ Maisonette in Thika
-                  </h3>
-                  <div className="text-sm text-gray-300 mb-3 flex items-center gap-1.5">
-                    <i className="fas fa-map-marker-alt text-gold text-xs" /> Thika Landless,
-                    Kiambu County
-                  </div>
-
-                  <div className="flex gap-5 text-sm text-gray-300 mb-5">
-                    {[
-                      { icon: "fas fa-bed", label: "4 Beds" },
-                      { icon: "fas fa-bath", label: "4 Baths" },
-                      { icon: "fas fa-ruler-combined", label: "333 m²" },
-                    ].map((feature) => (
-                      <span
-                        key={feature.label}
-                        className="flex items-center gap-1.5"
-                      >
-                        <i className={`${feature.icon} text-gold/70 text-xs`} />{" "}
-                        {feature.label}
-                      </span>
-                    ))}
-                  </div>
-
-                  <a
-                    href="/properties/maisonette-in-thika"
-                    className="inline-flex items-center gap-2 bg-gradient-to-r from-gold to-gold-light text-gray-900 px-5 py-2 rounded-full font-semibold text-sm hover:shadow-lg hover:shadow-gold/20 transition-all duration-300"
-                  >
-                    View Details{" "}
-                    <i className="fas fa-arrow-right text-xs" />
-                  </a>
-                </div>
-              </div>
-            </div>
-          </motion.div>
-        </div>
-
-        {/* ─── Trust indicators ───────────────────────────── */}
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 w-full">
+        {/* ─── Centered Tagline ─────────────────────────── */}
         <motion.div
-          className="mt-16 pt-8 border-t border-white/10"
+          className="text-center mb-16"
           variants={staggerContainer}
           initial="hidden"
-          whileInView="visible"
-          viewport={viewportConfig}
+          animate="visible"
         >
-          <div className="flex flex-wrap items-center justify-center lg:justify-between gap-6 text-sm text-gray-300">
-            {trustIndicators.map((item) => (
-              <motion.div
-                key={item.label}
-                variants={staggerItem}
-                className="flex items-center gap-2.5"
-              >
-                <i className={`${item.icon} text-gold`} />
-                <span className="font-medium">{item.label}</span>
-              </motion.div>
-            ))}
-          </div>
+          <motion.h1
+            variants={fadeUp}
+            transition={springGentle}
+            className="text-2xl md:text-3xl lg:text-4xl font-extrabold font-georgia leading-tight tracking-tight whitespace-nowrap"
+          >
+            <span className="text-primary">Building</span>{" "}
+            <span className="text-gold">Residencies,</span>{" "}
+            <span className="text-primary">Building</span>{" "}
+            <span className="text-gold">Legacies</span>
+          </motion.h1>
         </motion.div>
-      </div >
-    </section >
+
+        {/* ─── Portfolio Columns ────────────────────────── */}
+        <motion.div
+          className="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-10"
+          variants={staggerContainer}
+          initial="hidden"
+          animate="visible"
+        >
+          {portfolioColumns.map((col) => (
+            <motion.div
+              key={col.title}
+              variants={staggerItem}
+              className="group flex flex-col items-center text-center"
+            >
+              {/* Image */}
+              <div className="relative w-full aspect-[4/3] rounded-xl overflow-hidden shadow-lg mb-6">
+                <Image
+                  src={col.image}
+                  alt={col.title}
+                  fill
+                  sizes="(max-width: 768px) 100vw, 33vw"
+                  className="object-cover group-hover:scale-105 transition-transform duration-700"
+                  loading="lazy"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+              </div>
+
+              {/* Title */}
+              <h2 className="text-xl md:text-2xl font-extrabold font-raleway text-gray-900 mb-3 tracking-wide">
+                {col.title}
+              </h2>
+
+              {/* Description */}
+              <p className="text-sm text-gray-500 font-nunito leading-relaxed max-w-xs mx-auto mb-6">
+                {col.description}
+              </p>
+
+              {/* CTA Button */}
+              <Link
+                href={col.href}
+                className="inline-flex items-center justify-center gap-2 px-8 py-3 border-2 border-gray-900 text-gray-900 text-sm font-bold tracking-wider uppercase rounded-none hover:bg-primary hover:border-primary hover:text-white transition-all duration-300"
+              >
+                TAKE ME THERE
+              </Link>
+            </motion.div>
+          ))}
+        </motion.div>
+      </div>
+    </section>
   );
 }

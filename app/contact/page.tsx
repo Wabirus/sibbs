@@ -54,7 +54,7 @@ export default function ContactPage() {
                                         <div>
                                             <p className="font-bold text-lg mb-1">Phone</p>
                                             <p className="text-gray-300">+254 700 000 000</p>
-                                            <p className="text-gray-300 text-sm mt-1">Mon-Fri from 8am to 5pm</p>
+                                            <p className="text-gray-300 text-sm mt-1">Mon - Fri, 8am - 5pm | Sat 9am - 1pm</p>
                                         </div>
                                     </div>
 
@@ -85,26 +85,26 @@ export default function ContactPage() {
                             <h3 className="text-2xl font-bold font-raleway text-gray-900 mb-2">Send us a Message</h3>
                             <p className="text-gray-500 mb-8">We usually respond within 24 hours.</p>
 
-                            <form className="space-y-6">
+                            <form action="mailto:info@wearesibbs.com" method="post" encType="text/plain" className="space-y-6">
                                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                                     <div>
                                         <label className="block text-sm font-bold text-gray-700 mb-2">First Name</label>
-                                        <input type="text" className="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary/20 transition-all" />
+                                        <input name="First Name" type="text" required className="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary/20 transition-all" />
                                     </div>
                                     <div>
                                         <label className="block text-sm font-bold text-gray-700 mb-2">Last Name</label>
-                                        <input type="text" className="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary/20 transition-all" />
+                                        <input name="Last Name" type="text" required className="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary/20 transition-all" />
                                     </div>
                                 </div>
 
                                 <div>
                                     <label className="block text-sm font-bold text-gray-700 mb-2">Email</label>
-                                    <input type="email" className="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary/20 transition-all" />
+                                    <input name="Email" type="email" required className="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary/20 transition-all" />
                                 </div>
 
                                 <div>
                                     <label className="block text-sm font-bold text-gray-700 mb-2">Subject</label>
-                                    <select className="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary/20 transition-all appearance-none">
+                                    <select name="Subject" required className="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary/20 transition-all appearance-none">
                                         <option>General Inquiry</option>
                                         <option>Buying a Property</option>
                                         <option>Selling a Property</option>
@@ -115,10 +115,10 @@ export default function ContactPage() {
 
                                 <div>
                                     <label className="block text-sm font-bold text-gray-700 mb-2">Message</label>
-                                    <textarea rows={4} className="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary/20 transition-all resize-none"></textarea>
+                                    <textarea name="Message" required rows={4} className="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary/20 transition-all resize-none"></textarea>
                                 </div>
 
-                                <button className="w-full bg-gray-900 text-white font-bold py-4 rounded-lg hover:bg-gray-800 transition-colors shadow-lg shadow-gray-900/10">
+                                <button type="submit" className="w-full bg-gray-900 text-white font-bold py-4 rounded-lg hover:bg-gray-800 transition-colors shadow-lg shadow-gray-900/10">
                                     Send Message
                                 </button>
                             </form>

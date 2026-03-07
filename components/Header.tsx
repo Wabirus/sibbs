@@ -45,23 +45,23 @@ export default function Header() {
       >
         <div className="max-w-7xl mx-auto flex justify-center items-center gap-8 text-sm">
           <a
-            href="tel:+254700000000"
+            href="tel:+254743363186"
             className="flex items-center gap-2 hover:text-gold transition-colors duration-200"
           >
             <span className="flex items-center justify-center w-5 h-5 bg-white/10 rounded-full text-[10px]">
               <i className="fas fa-phone-alt" />
             </span>
-            +254 700 000 000
+            +254 7433 63186
           </a>
           <div className="w-px h-4 bg-white/20" />
           <a
-            href="mailto:info@sibbs.co.ke"
+            href="mailto:info@wearesibbs.com"
             className="flex items-center gap-2 hover:text-gold transition-colors duration-200"
           >
             <span className="flex items-center justify-center w-5 h-5 bg-white/10 rounded-full text-[10px]">
               <i className="fas fa-envelope" />
             </span>
-            info@sibbs.co.ke
+            info@wearesibbs.com
           </a>
         </div>
       </motion.div>

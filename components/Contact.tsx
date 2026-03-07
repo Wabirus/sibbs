@@ -21,14 +21,14 @@ const contactInfo = [
   {
     icon: "fas fa-phone-alt",
     label: "Call Us",
-    value: "+254 700 000 000",
-    href: "tel:+254700000000",
+    value: "+254 7433 63186",
+    href: "tel:+254743363186",
   },
   {
     icon: "fas fa-envelope",
     label: "Email Us",
-    value: "info@sibbs.co.ke",
-    href: "mailto:info@sibbs.co.ke",
+    value: "info@wearesibbs.com",
+    href: "mailto:info@wearesibbs.com",
   },
   {
     icon: "fas fa-map-marker-alt",
@@ -39,7 +39,7 @@ const contactInfo = [
   {
     icon: "fas fa-clock",
     label: "Working Hours",
-    value: "Mon – Fri, 8am – 6pm",
+    value: "Mon - Fri, 8am - 5pm | Sat 9am - 1pm",
     href: "#",
   },
 ];
@@ -64,9 +64,9 @@ export default function Contact() {
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    console.log("Form submitted:", formData);
+    const mailtoLink = `mailto:info@wearesibbs.com?subject=New Message from ${formData.name}&body=Name: ${formData.name}%0AEmail: ${formData.email}%0APhone: ${formData.phone}%0A%0AMessage:%0A${formData.message}`;
+    window.location.href = mailtoLink;
     setFormData({ name: "", email: "", phone: "", message: "" });
-    alert("Thank you! We will get back to you soon.");
   };
 
   return (
@@ -217,6 +217,7 @@ export default function Contact() {
                   name="phone"
                   value={formData.phone}
                   onChange={handleChange}
+                  required
                   placeholder="+254 xxx xxx xxx"
                   className="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-lg text-gray-900 placeholder-gray-400 focus:border-primary focus:ring-2 focus:ring-primary/10 outline-none transition-all duration-200 text-sm"
                 />
