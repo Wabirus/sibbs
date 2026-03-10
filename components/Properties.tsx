@@ -56,6 +56,7 @@ const properties: Property[] = [
     tag: "Sold",
     image:
       "/properties/bungalow-in-thika/5872941386271755598.jpg",
+    slug: "bungalow-in-thika",
   },
   {
     title: "Upcoming Project",

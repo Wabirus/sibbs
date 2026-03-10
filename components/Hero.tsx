@@ -37,7 +37,7 @@ const portfolioColumns: PortfolioColumn[] = [
     title: "The KNOX Residence 1",
     description:
       "Get started on building your dream home with our upcoming developments. Register your interest today for early access.",
-    href: "#contact",
+    href: "/properties/bungalow-in-thika",
   },
 ];
 
