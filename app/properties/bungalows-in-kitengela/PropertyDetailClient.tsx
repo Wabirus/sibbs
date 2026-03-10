@@ -8,7 +8,7 @@ import { fadeUp, sectionReveal, staggerContainer, staggerItem, viewportConfig } 
 import styles from "@/components/PropertyDetail.module.css";
 
 const images = [
-    { src: "/properties/bungalows-in-kitengela/kitengela-bungalow.png", alt: "Kitengela Bungalow front view" },
+    { src: "/properties/bungalows-in-kitengela/kitengela-bungalow.png", alt: "Ivanna Residence front view" },
     { src: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800&h=500&fit=crop", alt: "Living room interior" },
     { src: "https://images.unsplash.com/photo-1600566753190-17f0baa2a6c0?w=800&h=500&fit=crop", alt: "Kitchen area" },
     { src: "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=800&h=500&fit=crop", alt: "Master bedroom" },
@@ -73,7 +73,7 @@ export default function PropertyDetailClient() {
                     Properties
                 </Link>
                 <span className={styles.breadcrumbSep}>/</span>
-                <span className={styles.breadcrumbCurrent}>3 Bedroom + DSQ in Kitengela</span>
+                <span className={styles.breadcrumbCurrent}>Ivanna Residence</span>
             </nav>
 
             {/* Hero Section */}
@@ -85,7 +85,7 @@ export default function PropertyDetailClient() {
             >
                 <div className={styles.heroContent}>
                     <span className={styles.tag}>For Sale</span>
-                    <h1 className={styles.title}>3 Bedroom + DSQ in Gated Community</h1>
+                    <h1 className={styles.title}>Ivanna Residence</h1>
                     <p className={styles.location}>
                         <i className="fas fa-map-marker-alt" /> Kitengela, Kajiado County
                     </p>

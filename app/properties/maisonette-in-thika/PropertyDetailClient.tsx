@@ -8,7 +8,7 @@ import { fadeUp, sectionReveal, staggerContainer, staggerItem, viewportConfig } 
 import styles from "@/components/PropertyDetail.module.css";
 
 const images = [
-    { src: "/properties/maisonette-in-thika/aerial-view.jpg", alt: "Aerial view of Thika Maisonette" },
+    { src: "/properties/maisonette-in-thika/aerial-view.jpg", alt: "Aerial view of The KNOX Residence 2" },
     { src: "/properties/maisonette-in-thika/front-view.jpg", alt: "Front view with paved driveway" },
     { src: "/properties/maisonette-in-thika/front-angle.jpg", alt: "Front angle showing balconies" },
     { src: "/properties/maisonette-in-thika/bathroom.jpg", alt: "Modern ensuite bathroom" },
@@ -70,7 +70,7 @@ export default function PropertyDetailClient() {
                     Properties
                 </Link>
                 <span className={styles.breadcrumbSep}>/</span>
-                <span className={styles.breadcrumbCurrent}>4 Bedroom + DSQ Maisonette</span>
+                <span className={styles.breadcrumbCurrent}>The KNOX Residence 2</span>
             </nav>
 
             {/* Hero Section */}
@@ -82,7 +82,7 @@ export default function PropertyDetailClient() {
             >
                 <div className={styles.heroContent}>
                     <span className={styles.tag}>For Sale</span>
-                    <h1 className={styles.title}>4 Bedroom + DSQ Maisonette in Thika</h1>
+                    <h1 className={styles.title}>The KNOX Residence 2</h1>
                     <p className={styles.location}>
                         <i className="fas fa-map-marker-alt" /> Thika Landless, Kiambu County
                     </p>
@@ -174,7 +174,7 @@ export default function PropertyDetailClient() {
                 <h2 className={styles.sectionTitle}>Location</h2>
                 <div className={styles.mapContainer}>
                     <iframe
-                        src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3989.0!2d37.044907!3d-1.464752!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!1s0x0%3A0x0!5e0!3m2!1sen!2ske!4v1700000000000!5m2!1sen!2ske"
+                        src="https://maps.google.com/maps?q=-1.464752,37.044907&hl=en&z=14&output=embed"
                         width="100%"
                         height="450"
                         style={{ border: 0, borderRadius: "16px" }}
@@ -190,7 +190,7 @@ export default function PropertyDetailClient() {
             <section className={styles.ctaSection}>
                 <h2 className={styles.ctaTitle}>Interested in this property?</h2>
                 <p className={styles.ctaText}>
-                    Contact us today for a viewing or more information about this stunning 4 bedroom + DSQ maisonette in Thika Landless.
+                    Contact us today for a viewing or more information about the stunning The KNOX Residence 2 in Thika Landless.
                 </p>
                 <div className={styles.ctaButtons}>
                     <Link href="/#contact" className={styles.ctaPrimary}>

@@ -23,7 +23,7 @@ interface Property {
 
 const properties: Property[] = [
   {
-    title: "4 Bedroom + DSQ Maisonette in Thika",
+    title: "The KNOX Residence 2",
     price: "KES 20M",
     location: "Thika Landless, Kiambu",
     beds: 4,
@@ -35,7 +35,7 @@ const properties: Property[] = [
     slug: "maisonette-in-thika",
   },
   {
-    title: "3 Bedroom + DSQ in Kitengela",
+    title: "Ivanna Residence",
     price: "Contact Us",
     location: "Kitengela, Kajiado",
     beds: 3,
@@ -47,7 +47,7 @@ const properties: Property[] = [
     slug: "bungalows-in-kitengela",
   },
   {
-    title: "4 Bedroom Bungalow in Thika",
+    title: "The KNOX Residence 1",
     price: "SOLD",
     location: "Thika Landless, Kiambu",
     beds: 4,
@@ -55,7 +55,7 @@ const properties: Property[] = [
     sqft: "—",
     tag: "Sold",
     image:
-      "https://images.unsplash.com/photo-1568605114967-8130f3a36994?w=600&h=400&fit=crop",
+      "/properties/bungalow-in-thika/front-view.jpg",
   },
   {
     title: "Upcoming Project",
