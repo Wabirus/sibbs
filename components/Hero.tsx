@@ -78,37 +78,41 @@ export default function Hero() {
             <motion.div
               key={col.title}
               variants={staggerItem}
-              className="group flex flex-col items-center text-center"
+              className="h-full"
             >
-              {/* Image */}
-              <div className="relative w-full aspect-[4/3] rounded-xl overflow-hidden shadow-lg mb-6">
-                <Image
-                  src={col.image}
-                  alt={col.title}
-                  fill
-                  sizes="(max-width: 768px) 100vw, 33vw"
-                  className="object-cover group-hover:scale-105 transition-transform duration-700"
-                  priority
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-              </div>
-
-              {/* Title */}
-              <h2 className="text-xl md:text-2xl font-extrabold font-raleway text-gray-900 mb-3 tracking-wide">
-                {col.title}
-              </h2>
-
-              {/* Description */}
-              <p className="text-sm text-gray-500 font-nunito leading-relaxed max-w-xs mx-auto mb-6">
-                {col.description}
-              </p>
-
-              {/* CTA Button */}
-              <Link
-                href={col.href}
-                className="inline-flex items-center justify-center gap-2 px-8 py-3 border-2 border-gray-900 text-gray-900 text-sm font-bold tracking-wider uppercase rounded-none hover:bg-primary hover:border-primary hover:text-white transition-all duration-300"
+              <Link 
+                href={col.href} 
+                className="group flex flex-col items-center text-center h-full"
               >
-                TAKE ME THERE
+                {/* Image */}
+                <div className="relative w-full aspect-[4/3] rounded-xl overflow-hidden shadow-lg mb-6">
+                  <Image
+                    src={col.image}
+                    alt={col.title}
+                    fill
+                    sizes="(max-width: 768px) 100vw, 33vw"
+                    className="object-cover group-hover:scale-105 transition-transform duration-700"
+                    priority
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                </div>
+
+                {/* Title */}
+                <h2 className="text-xl md:text-2xl font-extrabold font-raleway text-gray-900 mb-3 tracking-wide group-hover:text-primary transition-colors duration-300">
+                  {col.title}
+                </h2>
+
+                {/* Description */}
+                <p className="text-sm text-gray-500 font-nunito leading-relaxed max-w-xs mx-auto mb-6">
+                  {col.description}
+                </p>
+
+                {/* CTA Button */}
+                <div
+                  className="mt-auto inline-flex items-center justify-center gap-2 px-8 py-3 border-2 border-gray-900 text-gray-900 text-sm font-bold tracking-wider uppercase rounded-none group-hover:bg-primary group-hover:border-primary group-hover:text-white transition-all duration-300"
+                >
+                  TAKE ME THERE
+                </div>
               </Link>
             </motion.div>
           ))}
