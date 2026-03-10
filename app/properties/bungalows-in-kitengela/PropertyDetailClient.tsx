@@ -8,7 +8,7 @@ import { fadeUp, sectionReveal, staggerContainer, staggerItem, viewportConfig } 
 import styles from "@/components/PropertyDetail.module.css";
 
 const images = [
-    { src: "/properties/bungalows-in-kitengela/kitengela-bungalow.png", alt: "Ivanna Residence front view" },
+    { src: "/properties/bungalows-in-kitengela/kitengela-bungalow.webp", alt: "Ivanna Residence front view" },
     { src: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800&h=500&fit=crop", alt: "Living room interior" },
     { src: "https://images.unsplash.com/photo-1600566753190-17f0baa2a6c0?w=800&h=500&fit=crop", alt: "Kitchen area" },
     { src: "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=800&h=500&fit=crop", alt: "Master bedroom" },

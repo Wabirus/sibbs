@@ -55,7 +55,7 @@ const properties: Property[] = [
     sqft: "—",
     tag: "Sold",
     image:
-      "/properties/bungalow-in-thika/front-view.jpg",
+      "/properties/bungalow-in-thika/5872941386271755598.jpg",
   },
   {
     title: "Upcoming Project",

@@ -39,15 +39,8 @@ export default function Services() {
       id="services"
       className="relative py-24 px-4 flex items-center justify-center overflow-hidden"
     >
-      {/* ── Parallax Background ────────────────────────── */}
-      <div
-        className="absolute inset-0 z-0 bg-center bg-cover bg-no-repeat bg-fixed bg-opacity-50"
-        style={{
-          backgroundImage: "url('https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=600&h=400&fit=crop')",
-        }}
-      >
-        <div className="absolute inset-0 bg-primary backdrop-blur-[2px]" />
-      </div>
+      {/* ── Background ────────────────────────── */}
+      <div className="absolute inset-0 z-0 bg-primary" />
 
       <div className="max-w-7xl mx-auto relative z-10 w-full">
         {/* Section heading (Glass Card) */}

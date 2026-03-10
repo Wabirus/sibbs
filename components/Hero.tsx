@@ -26,14 +26,14 @@ const portfolioColumns: PortfolioColumn[] = [
     href: "/properties/maisonette-in-thika",
   },
   {
-    image: "/properties/bungalows-in-kitengela/kitengela-bungalow.png",
+    image: "/properties/bungalows-in-kitengela/kitengela-bungalow.webp",
     title: "Ivanna Residence",
     description:
       "Discover our 3-bedroom + DSQ bungalows in Kitengela, offering comfortable and affordable homes in a fast-growing area.",
     href: "/properties/bungalows-in-kitengela",
   },
   {
-    image: "/properties/bungalow-in-thika/front-view.jpg",
+    image: "/properties/bungalow-in-thika/5872941386271755598.jpg",
     title: "The KNOX Residence 1",
     description:
       "Get started on building your dream home with our upcoming developments. Register your interest today for early access.",
@@ -88,7 +88,7 @@ export default function Hero() {
                   fill
                   sizes="(max-width: 768px) 100vw, 33vw"
                   className="object-cover group-hover:scale-105 transition-transform duration-700"
-                  loading="lazy"
+                  priority
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
               </div>
