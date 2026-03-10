@@ -9,14 +9,14 @@ import styles from "@/components/PropertyDetail.module.css";
 
 const images = [
     { src: "/properties/bungalow-in-thika/5872941386271755598.jpg", alt: "Front view of The KNOX Residence 1" },
-    { src: "/properties/bungalow-in-thika/5872941386271755597.jpg", alt: "Exterior side view" },
-    { src: "/properties/bungalow-in-thika/5872941386271755599.jpg", alt: "Backyard at night" },
-    { src: "/properties/bungalow-in-thika/5872941386271755591.jpg", alt: "Modern kitchen area" },
     { src: "/properties/bungalow-in-thika/5872941386271755592.jpg", alt: "Spacious living room" },
+    { src: "/properties/bungalow-in-thika/5872941386271755596.jpg", alt: "Living space" },
+    { src: "/properties/bungalow-in-thika/5872941386271755591.jpg", alt: "Modern kitchen area" },
     { src: "/properties/bungalow-in-thika/5872941386271755593.jpg", alt: "Kitchen counter" },
     { src: "/properties/bungalow-in-thika/5872941386271755594.jpg", alt: "Bedroom with wardrobe" },
     { src: "/properties/bungalow-in-thika/5872941386271755595.jpg", alt: "Bathroom" },
-    { src: "/properties/bungalow-in-thika/5872941386271755596.jpg", alt: "Living space" },
+    { src: "/properties/bungalow-in-thika/5872941386271755599.jpg", alt: "Backyard at night" },
+    { src: "/properties/bungalow-in-thika/5872941386271755597.jpg", alt: "Exterior side view" },
 ];
 
 const amenities = [
