@@ -80,8 +80,8 @@ export default function Hero() {
               variants={staggerItem}
               className="h-full"
             >
-              <Link 
-                href={col.href} 
+              <Link
+                href={col.href}
                 className="group flex flex-col items-center text-center h-full"
               >
                 {/* Image */}
