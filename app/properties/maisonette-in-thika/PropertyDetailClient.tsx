@@ -8,6 +8,9 @@ import { fadeUp, sectionReveal, staggerContainer, staggerItem, viewportConfig } 
 import styles from "@/components/PropertyDetail.module.css";
 
 const images = [
+    { src: "/properties/maisonette-in-thika/knox2-1.webp", alt: "The KNOX Residence 2 - Front view" },
+    { src: "/properties/maisonette-in-thika/knox2-2.webp", alt: "The KNOX Residence 2 - Kitchen interior" },
+    { src: "/properties/maisonette-in-thika/knox2-3.webp", alt: "The KNOX Residence 2 - Front angle wide" },
     { src: "/properties/maisonette-in-thika/aerial-view.jpg", alt: "Aerial view of The KNOX Residence 2" },
     { src: "/properties/maisonette-in-thika/front-view.jpg", alt: "Front view with paved driveway" },
     { src: "/properties/maisonette-in-thika/front-angle.jpg", alt: "Front angle showing balconies" },

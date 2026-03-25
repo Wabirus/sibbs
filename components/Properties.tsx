@@ -31,7 +31,7 @@ const properties: Property[] = [
     sqft: "333 m²",
     tag: "For Sale",
     image:
-      "/properties/maisonette-in-thika/aerial-view.jpg",
+      "/properties/maisonette-in-thika/knox2-1.webp",
     slug: "maisonette-in-thika",
   },
   {
@@ -43,7 +43,7 @@ const properties: Property[] = [
     sqft: "179 m²",
     tag: "For Sale",
     image:
-      "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=600&h=400&fit=crop",
+      "/properties/bungalows-in-kitengela/ivanna-3.webp",
     slug: "bungalows-in-kitengela",
   },
   {

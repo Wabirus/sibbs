@@ -19,14 +19,14 @@ interface PortfolioColumn {
 
 const portfolioColumns: PortfolioColumn[] = [
   {
-    image: "/properties/maisonette-in-thika/front-view.jpg",
+    image: "/properties/maisonette-in-thika/knox2-1.webp",
     title: "The KNOX Residence 2",
     description:
       "Explore our premium 4-bedroom + DSQ maisonettes in Thika, designed for modern family living with spacious layouts and quality finishes.",
     href: "/properties/maisonette-in-thika",
   },
   {
-    image: "/properties/bungalows-in-kitengela/kitengela-bungalow.webp",
+    image: "/properties/bungalows-in-kitengela/ivanna-3.webp",
     title: "Ivanna Residence",
     description:
       "Discover our 3-bedroom + DSQ bungalows in Kitengela, offering comfortable and affordable homes in a fast-growing area.",
