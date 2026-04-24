@@ -36,7 +36,7 @@ const properties: Property[] = [
   },
   {
     title: "Ivanna Residence",
-    price: "Contact Us",
+    price: "KES 10M",
     location: "Kitengela, Kajiado",
     beds: 3,
     baths: 3,

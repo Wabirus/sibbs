@@ -12,6 +12,8 @@ const images = [
     { src: "/properties/bungalows-in-kitengela/ivanna-2.webp", alt: "Ivanna Residence – side view with carport" },
     { src: "/properties/bungalows-in-kitengela/ivanna-3.webp", alt: "Ivanna Residence – full front facade" },
     { src: "/properties/bungalows-in-kitengela/ivanna-4.webp", alt: "Ivanna Residence – aerial roof view" },
+    { src: "/properties/bungalows-in-kitengela/ivanna-floorplan-1.webp", alt: "Ivanna Residence – 3D floorplan view 1" },
+    { src: "/properties/bungalows-in-kitengela/ivanna-floorplan-2.webp", alt: "Ivanna Residence – 3D floorplan view 2" },
     { src: "/properties/bungalows-in-kitengela/ivanna-5.webp", alt: "Ivanna Residence – site plan" },
 ];
 
@@ -38,6 +40,9 @@ const highlights = [
     "Green spaces within the gated community",
     "Cabro internal access road",
     "179 sqm plinth area",
+    "Price: KES 10 Million",
+    "10% discount for off-plan buying",
+    "KCB Partnership available",
 ];
 
 export default function PropertyDetailClient() {
@@ -90,7 +95,7 @@ export default function PropertyDetailClient() {
                     <p className={styles.location}>
                         <i className="fas fa-map-marker-alt" /> Kitengela, Kajiado County
                     </p>
-                    <p className={styles.price}>Contact Us for Pricing</p>
+                    <p className={styles.price}>KES 10M <span style={{ fontSize: '0.6em', opacity: 0.8 }}>(10% Off-plan Discount)</span></p>
                 </div>
             </motion.section>
 
@@ -178,7 +183,7 @@ export default function PropertyDetailClient() {
                 <h2 className={styles.sectionTitle}>Location</h2>
                 <div className={styles.mapContainer}>
                     <iframe
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d63821.76074498056!2d36.93!3d-1.47!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x182f0e9ca3b3e4c3%3A0x9b4e2b0f4a4e3a5d!2sKitengela!5e0!3m2!1sen!2ske!4v1700000000000!5m2!1sen!2ske"
+                        src="https://maps.google.com/maps?q=-1.5086883346582924,36.93318621349214&hl=en&z=14&output=embed"
                         width="100%"
                         height="450"
                         style={{ border: 0, borderRadius: "16px" }}
@@ -192,6 +197,38 @@ export default function PropertyDetailClient() {
 
             {/* CTA */}
             <section className={styles.ctaSection}>
+                <div className="bg-gray-50 p-8 rounded-2xl mb-10 border border-gray-100 max-w-4xl mx-auto text-left">
+                    <h3 className="text-xl font-bold text-primary mb-4 flex items-center gap-2">
+                        <i className="fas fa-coins text-gold"></i> Payment Plan
+                    </h3>
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                        <div className="p-4 bg-white rounded-xl shadow-sm border border-gray-50">
+                            <p className="text-xs font-bold text-gray-400 uppercase mb-1">Booking</p>
+                            <p className="text-xl font-extrabold text-gray-900">Ksh 50,000</p>
+                        </div>
+                        <div className="p-4 bg-white rounded-xl shadow-sm border border-gray-50">
+                            <p className="text-xs font-bold text-gray-400 uppercase mb-1">On Signing</p>
+                            <p className="text-xl font-extrabold text-gray-900">20% Deposit</p>
+                        </div>
+                        <div className="p-4 bg-white rounded-xl shadow-sm border border-gray-50">
+                            <p className="text-xs font-bold text-gray-400 uppercase mb-1">Balance</p>
+                            <p className="text-xl font-extrabold text-gray-900">Within 6 Months</p>
+                        </div>
+                    </div>
+                    <div className="mt-8 pt-6 border-t border-gray-200">
+                        <div className="flex flex-col md:flex-row items-center justify-between gap-6">
+                            <div>
+                                <h3 className="text-xl font-bold text-primary mb-2">Financing Partner</h3>
+                                <p className="text-gray-600">Take advantage of our KCB partnership for flexible mortgage options.</p>
+                            </div>
+                            <div className="bg-white px-6 py-3 rounded-xl border-2 border-primary/10 shadow-lg">
+                                <span className="text-2xl font-black text-[#006A4D]">KCB</span>
+                                <span className="ml-2 text-sm font-bold text-gray-400">Official Partner</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
                 <h2 className={styles.ctaTitle}>Interested in this property?</h2>
                 <p className={styles.ctaText}>
                     Contact us today for a viewing or more information about this beautiful 3 bedroom + DSQ in a gated community in Kitengela.

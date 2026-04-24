@@ -41,8 +41,8 @@ export default function ContactPage() {
                                         <div>
                                             <p className="font-bold text-lg mb-1">Headquarters</p>
                                             <p className="text-gray-300 leading-relaxed">
-                                                123 Luxury Lane, Westlands<br />
-                                                Nairobi, Kenya
+                                                Kwanza Twin Towers, Ground Floor,<br />
+                                                G2 Eastern Bypass, Ruiru
                                             </p>
                                         </div>
                                     </div>
@@ -53,7 +53,7 @@ export default function ContactPage() {
                                         </div>
                                         <div>
                                             <p className="font-bold text-lg mb-1">Phone</p>
-                                            <p className="text-gray-300">+254 700 000 000</p>
+                                            <p className="text-gray-300">+254 7433 63186</p>
                                             <p className="text-gray-300 text-sm mt-1">Mon - Fri, 8am - 5pm | Sat 9am - 1pm</p>
                                         </div>
                                     </div>
@@ -64,8 +64,7 @@ export default function ContactPage() {
                                         </div>
                                         <div>
                                             <p className="font-bold text-lg mb-1">Email</p>
-                                            <p className="text-gray-300">hello@sibbs-realestate.com</p>
-                                            <p className="text-gray-300">support@sibbs-realestate.com</p>
+                                            <p className="text-gray-300">info@wearesibbs.com</p>
                                         </div>
                                     </div>
                                 </div>

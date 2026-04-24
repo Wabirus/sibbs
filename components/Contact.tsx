@@ -33,7 +33,7 @@ const contactInfo = [
   {
     icon: "fas fa-map-marker-alt",
     label: "Visit Us",
-    value: "Nairobi, Kenya",
+    value: "Kwanza Twin Towers, G2 Eastern Bypass, Ruiru",
     href: "#",
   },
   {
