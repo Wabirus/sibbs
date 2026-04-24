@@ -22,7 +22,7 @@ const portfolioColumns: PortfolioColumn[] = [
     image: "/properties/maisonette-in-thika/knox2-1.webp",
     title: "The KNOX Residence 2",
     description:
-      "Explore our premium 4-bedroom + DSQ maisonettes in Thika, designed for modern family living with spacious layouts and quality finishes.",
+      "Explore our premium 4-bedroom + DSQ maisonette in Thika, designed for modern family living with spacious layouts and quality finishes.",
     href: "/properties/maisonette-in-thika",
   },
   {
