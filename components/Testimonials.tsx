@@ -17,25 +17,25 @@ interface Testimonial {
 
 const testimonials: Testimonial[] = [
   {
-    name: "John Kipchoge",
-    role: "Property Buyer",
+    name: "Peter Okonkwo",
+    role: "Business Owner",
     message:
-      "SIBBS helped me find the perfect property. Their team was professional and transparent throughout the process. Highly recommended!",
-    initials: "JK",
+      "SIBBS handled my home purchase in Thika Landless with clear timelines and regular updates. The house was delivered as agreed and the quality met my expectations. I refer clients to them with confidence.",
+    initials: "PO",
   },
   {
     name: "Sarah Mwangi",
     role: "Investor",
     message:
-      "I invested in a land plot through SIBBS and it has appreciated significantly. Great investment opportunity and excellent service!",
+      "I bought a 3 bedroom plus DSQ unit in the Kitengela gated community. The layout is practical and the finishing meets good standards. The property value has grown since purchase. The team kept communication clear from booking to handover.",
     initials: "SM",
   },
   {
-    name: "Peter Okonkwo",
-    role: "Business Owner",
+    name: "John Kipchoge",
+    role: "Home Owner",
     message:
-      "Their rental management service is excellent. I trust them completely with my properties. Returns have exceeded expectations.",
-    initials: "PO",
+      "I purchased a 3 bedroom plus DSQ home in Kitengela. The rooms are spacious and add strong value for family use. The process stayed transparent from start to finish. I received all documents on time.",
+    initials: "JK",
   },
 ];
 
