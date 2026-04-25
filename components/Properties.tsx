@@ -60,7 +60,7 @@ const properties: Property[] = [
   },
   {
     title: "Upcoming Project",
-    price: "Starting KES 4M",
+    price: "",
     location: "Kenya",
     beds: 0,
     baths: 0,
@@ -107,9 +107,11 @@ export default function Properties() {
                 </span>
 
                 {/* Price */}
+                {property.price && (
                 <span className="absolute bottom-3 right-3 bg-white/95 backdrop-blur-sm text-primary font-bold text-lg px-3 py-1 rounded-lg shadow-md">
                   {property.price}
                 </span>
+                )}
               </div>
 
               {/* Content */}
