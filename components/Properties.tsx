@@ -43,7 +43,7 @@ const properties: Property[] = [
     sqft: "179 m²",
     tag: "For Sale",
     image:
-      "/properties/bungalows-in-kitengela/ivanna-3.webp",
+      "/properties/bungalows-in-kitengela/ivanna-render-1.webp",
     slug: "bungalows-in-kitengela",
   },
   {

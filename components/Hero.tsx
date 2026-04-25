@@ -26,7 +26,7 @@ const portfolioColumns: PortfolioColumn[] = [
     href: "/properties/maisonette-in-thika",
   },
   {
-    image: "/properties/bungalows-in-kitengela/ivanna-3.webp",
+    image: "/properties/bungalows-in-kitengela/ivanna-render-1.webp",
     title: "Ivanna Residence",
     description:
       "Discover our 3-bedroom + DSQ bungalows in Kitengela, offering comfortable and affordable homes in a fast-growing area.",

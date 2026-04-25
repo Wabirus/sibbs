@@ -8,13 +8,9 @@ import { fadeUp, sectionReveal, staggerContainer, staggerItem, viewportConfig } 
 import styles from "@/components/PropertyDetail.module.css";
 
 const images = [
-    { src: "/properties/bungalows-in-kitengela/ivanna-1.webp", alt: "Ivanna Residence – front entrance view" },
-    { src: "/properties/bungalows-in-kitengela/ivanna-2.webp", alt: "Ivanna Residence – side view with carport" },
-    { src: "/properties/bungalows-in-kitengela/ivanna-3.webp", alt: "Ivanna Residence – full front facade" },
-    { src: "/properties/bungalows-in-kitengela/ivanna-4.webp", alt: "Ivanna Residence – aerial roof view" },
-    { src: "/properties/bungalows-in-kitengela/ivanna-floorplan-1.webp", alt: "Ivanna Residence – 3D floorplan view 1" },
-    { src: "/properties/bungalows-in-kitengela/ivanna-floorplan-2.webp", alt: "Ivanna Residence – 3D floorplan view 2" },
-    { src: "/properties/bungalows-in-kitengela/ivanna-5.webp", alt: "Ivanna Residence – site plan" },
+    { src: "/properties/bungalows-in-kitengela/ivanna-render-1.webp", alt: "Ivanna Residence – front facade evening view" },
+    { src: "/properties/bungalows-in-kitengela/ivanna-render-2.webp", alt: "Ivanna Residence – entrance and carport view" },
+    { src: "/properties/bungalows-in-kitengela/ivanna-floorplan.webp", alt: "Ivanna Residence – 3D floor plan" },
 ];
 
 const amenities = [
