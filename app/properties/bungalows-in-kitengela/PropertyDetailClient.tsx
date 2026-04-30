@@ -221,9 +221,9 @@ export default function PropertyDetailClient() {
                                 <h3 className="text-xl font-bold text-primary mb-2">Financing Partner</h3>
                                 <p className="text-gray-600">Take advantage of our KCB partnership for flexible mortgage options.</p>
                             </div>
-                            <div className="bg-white px-6 py-3 rounded-xl border-2 border-primary/10 shadow-lg">
-                                <span className="text-2xl font-black text-[#006A4D]">KCB</span>
-                                <span className="ml-2 text-sm font-bold text-gray-400">Official Partner</span>
+                            <div className="bg-white px-6 py-3 rounded-xl border-2 border-primary/10 shadow-lg flex items-center">
+                                <Image src="/images/kcb-group-plc-logo.webp" alt="KCB Logo" width={80} height={30} style={{ objectFit: 'contain' }} />
+                                <span className="ml-3 text-sm font-bold text-gray-400">Official Partner</span>
                             </div>
                         </div>
                     </div>
