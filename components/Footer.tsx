@@ -47,9 +47,9 @@ export default function Footer() {
             <div className="flex items-center gap-2 mb-4">
               <div className="w-32 h-10 relative">
                 <img
-                  src="/images/sibbs-logo.png"
+                  src="/sibbs-logo-blue.jpg"
                   alt="SIBBS Real Estate"
-                  className="object-contain w-full h-full invert grayscale brightness-150 mix-blend-screen"
+                  className="object-contain w-full h-full"
                 />
               </div>
             </div>

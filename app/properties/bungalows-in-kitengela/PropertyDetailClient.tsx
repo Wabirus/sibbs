@@ -11,6 +11,7 @@ const images = [
     { src: "/properties/bungalows-in-kitengela/ivanna-render-1.webp", alt: "Ivanna Residence – front facade evening view" },
     { src: "/properties/bungalows-in-kitengela/ivanna-render-2.webp", alt: "Ivanna Residence – entrance and carport view" },
     { src: "/properties/bungalows-in-kitengela/ivanna-floorplan.webp", alt: "Ivanna Residence – 3D floor plan" },
+    { src: "/properties/bungalows-in-kitengela/aerial-view.jpg", alt: "Ivanna Residence – Aerial view of the community" },
 ];
 
 const amenities = [
@@ -197,6 +198,9 @@ export default function PropertyDetailClient() {
                     <h3 className="text-xl font-bold text-primary mb-4 flex items-center gap-2">
                         <i className="fas fa-coins text-gold"></i> Payment Plan
                     </h3>
+                    <p className="text-gray-600 mb-6">
+                        10% discount for off-plan buying. Booking is Ksh 50,000, followed by 20% upon signing, and the balance cleared within 6 months.
+                    </p>
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                         <div className="p-4 bg-white rounded-xl shadow-sm border border-gray-50">
                             <p className="text-xs font-bold text-gray-400 uppercase mb-1">Booking</p>

@@ -58,17 +58,6 @@ const properties: Property[] = [
       "/properties/bungalow-in-thika/5872941386271755598.jpg",
     slug: "bungalow-in-thika",
   },
-  {
-    title: "Upcoming Project",
-    price: "",
-    location: "Kenya",
-    beds: 0,
-    baths: 0,
-    sqft: "TBA",
-    tag: "Coming Soon",
-    image:
-      "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=600&h=400&fit=crop",
-  },
 ];
 
 export default function Properties() {
@@ -77,7 +66,7 @@ export default function Properties() {
       <div className="max-w-7xl mx-auto">
         {/* Property cards */}
         <motion.div
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6"
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
           variants={staggerContainer}
           initial="hidden"
           whileInView="visible"

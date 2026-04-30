@@ -9,12 +9,15 @@ import styles from "@/components/PropertyDetail.module.css";
 
 const images = [
     { src: "/properties/maisonette-in-thika/knox2-1.webp", alt: "The KNOX Residence 2 - Front view" },
+    { src: "/properties/maisonette-in-thika/living-room-entry.jpg", alt: "Living room with front door entry" },
+    { src: "/properties/maisonette-in-thika/kitchen-living.jpg", alt: "Open kitchen and living area" },
     { src: "/properties/maisonette-in-thika/knox2-2.webp", alt: "The KNOX Residence 2 - Kitchen interior" },
+    { src: "/properties/maisonette-in-thika/bathroom.jpg", alt: "Modern ensuite bathroom" },
+    { src: "/properties/maisonette-in-thika/bedroom-sunlight.jpg", alt: "Spacious bedroom with natural sunlight" },
+    { src: "/properties/maisonette-in-thika/bedroom-two-windows.jpg", alt: "Bedroom with panoramic windows" },
+    { src: "/properties/maisonette-in-thika/wardrobe-closet.jpg", alt: "Built-in wardrobe and closet" },
     { src: "/properties/maisonette-in-thika/knox2-3.webp", alt: "The KNOX Residence 2 - Front angle wide" },
     { src: "/properties/maisonette-in-thika/aerial-view.jpg", alt: "Aerial view of The KNOX Residence 2" },
-    { src: "/properties/maisonette-in-thika/front-view.jpg", alt: "Front view with paved driveway" },
-    { src: "/properties/maisonette-in-thika/front-angle.jpg", alt: "Front angle showing balconies" },
-    { src: "/properties/maisonette-in-thika/bathroom.jpg", alt: "Modern ensuite bathroom" },
 ];
 
 const amenities = [
