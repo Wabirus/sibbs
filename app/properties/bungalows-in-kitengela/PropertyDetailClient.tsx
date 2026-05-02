@@ -231,7 +231,7 @@ export default function PropertyDetailClient() {
 
                 <h2 className={styles.ctaTitle}>Interested in this property?</h2>
                 <p className={styles.ctaText}>
-                    Contact us today for a viewing or more information about this beautiful 3 bedroom + DSQ in a gated community in Kitengela.
+                    Contact us today for a viewing or more information about this beautiful 3&nbsp;bedroom + DSQ in a gated community in Kitengela.
                 </p>
                 <div className={styles.ctaButtons}>
                     <Link href="/#contact" className={styles.ctaPrimary}>
