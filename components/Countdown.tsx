@@ -77,7 +77,7 @@ export default function Countdown() {
               variants={fadeUp}
               className="text-2xl md:text-3xl font-extrabold text-primary mb-1 font-raleway tracking-tight"
             >
-              Ground Breaking Countdown
+              Ivanna Residence Ground Breaking
             </motion.h2>
             <motion.p 
               variants={fadeUp}
