@@ -15,7 +15,7 @@ const images = [
 ];
 
 const amenities = [
-    { icon: "fas fa-bed", label: "Bedrooms", value: "3 Ensuite" },
+    { icon: "fas fa-bed", label: "Bedrooms", value: "3 Ensuite, 4 Baths" },
     { icon: "fas fa-ruler-combined", label: "Plinth Area", value: "179 m²" },
     { icon: "fas fa-car", label: "Parking", value: "Large" },
     { icon: "fas fa-home", label: "DSQ", value: "Included" },
@@ -24,7 +24,7 @@ const amenities = [
 ];
 
 const highlights = [
-    "3 bedrooms all ensuite",
+    "3 bedrooms, 4 bathrooms (all ensuite)",
     "Master bedroom with double vanities",
     "Open kitchen with large pantry",
     "Guest cloakroom",
@@ -36,7 +36,7 @@ const highlights = [
     "Individual title deed",
     "Green spaces within the gated community",
     "Cabro internal access road",
-    "179 sqm plinth area",
+    "179 m² plinth area",
     "Price: KES 10 Million",
     "10% discount for off-plan buying",
     "KCB Partnership available",
@@ -231,7 +231,7 @@ export default function PropertyDetailClient() {
 
                 <h2 className={styles.ctaTitle}>Interested in this property?</h2>
                 <p className={styles.ctaText}>
-                    Contact us today for a viewing or more information about this beautiful 3&nbsp;bedroom + DSQ in a gated community in Kitengela.
+                    Contact us today for a viewing or more information about this beautiful 4&nbsp;bathroom home in a gated community in Kitengela.
                 </p>
                 <div className={styles.ctaButtons}>
                     <Link href="/#contact" className={styles.ctaPrimary}>

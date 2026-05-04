@@ -38,7 +38,7 @@ const highlights = [
     "Large rooftop that can host 50 guests",
     "Larger family room suitable for home office",
     "Consistent supply of water from a borehole",
-    "333 sqm plinth area",
+    "333 m² plinth area",
     "Price: KES 20 Million (negotiable)",
 ];
 

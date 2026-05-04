@@ -39,7 +39,7 @@ const properties: Property[] = [
     price: "KES 10M",
     location: "Kitengela, Kajiado",
     beds: 3,
-    baths: 3,
+    baths: 4,
     sqft: "179 m²",
     tag: "For Sale",
     image:
@@ -52,7 +52,7 @@ const properties: Property[] = [
     location: "Thika Landless, Kiambu",
     beds: 4,
     baths: 2,
-    sqft: "—",
+    sqft: "260 m²",
     tag: "Sold",
     image:
       "/properties/bungalow-in-thika/5872941386271755598.jpg",
@@ -130,7 +130,7 @@ export default function Properties() {
                   )}
                   <span className="flex items-center gap-1">
                     <i className="fas fa-ruler-combined text-primary/40" />
-                    {property.sqft} sqft
+                    {property.sqft}
                   </span>
                 </div>
 

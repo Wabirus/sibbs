@@ -21,6 +21,7 @@ const images = [
 
 const amenities = [
     { icon: "fas fa-bed", label: "Bedrooms", value: "4 Beds, 2 Baths" },
+    { icon: "fas fa-ruler-combined", label: "Plinth Area", value: "260 m²" },
     { icon: "fas fa-car", label: "Parking", value: "Ample" },
     { icon: "fas fa-home", label: "Property", value: "Bungalow" },
     { icon: "fas fa-shield-alt", label: "Security", value: "Gated" },
@@ -28,6 +29,7 @@ const amenities = [
 ];
 
 const highlights = [
+    "260 m² plinth area",
     "4 bedrooms, 2 bathrooms",
     "Spacious kitchen with modern fittings",
     "Guest cloakroom",

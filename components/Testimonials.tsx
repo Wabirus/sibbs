@@ -27,7 +27,7 @@ const testimonials: Testimonial[] = [
     name: "Sarah Mwangi",
     role: "Investor",
     message:
-      "I bought a 3 bedroom plus DSQ unit in the Kitengela gated community. The layout is practical and the finishing meets good standards. The property value has grown since purchase. The team kept communication clear from booking to handover.",
+      "I bought a 3 bedroom plus DSQ unit in the Kitengela gated community. The layout is practical and the finishing meets good standards. The property value has grown since purchase. The team has kept communication clear from booking to handover.",
     initials: "SM",
   },
   {
