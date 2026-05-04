@@ -15,5 +15,28 @@ export const metadata: Metadata = {
 };
 
 export default function MaisonetteInThika() {
-    return <PropertyDetailClient />;
+    return (
+        <>
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{
+                    __html: JSON.stringify({
+                        "@context": "https://schema.org",
+                        "@type": "RealEstateListing",
+                        "name": "The KNOX Residence 2 — 4 Bedroom Maisonette in Thika",
+                        "description": "Premium 4-bedroom + DSQ maisonette for sale in Thika Landless. Features 333 sqm plinth area, all ensuite bedrooms, borehole water, and KCB financing.",
+                        "url": "https://wearesibbs.com/properties/maisonette-in-thika",
+                        "image": "https://wearesibbs.com/properties/maisonette-in-thika/knox2-1.webp",
+                        "address": {
+                            "@type": "PostalAddress",
+                            "addressLocality": "Thika",
+                            "addressRegion": "Kiambu",
+                            "addressCountry": "KE"
+                        }
+                    }),
+                }}
+            />
+            <PropertyDetailClient />
+        </>
+    );
 }

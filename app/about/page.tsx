@@ -1,7 +1,14 @@
+import type { Metadata } from "next";
 import Image from "next/image";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { companyStats, companyValues, teamMembers } from "@/data/company";
+
+export const metadata: Metadata = {
+    title: "About Us — SIBBS Real Estate Kenya",
+    description: "Learn more about SIBBS Real Estate, Kenya's premier property consultancy. We specialize in high-quality, affordable residential housing and luxury investment properties.",
+    keywords: ["SIBBS Real Estate", "property developers Kenya", "real estate agency Nairobi", "about SIBBS"],
+};
 
 export default function AboutPage() {
     return (

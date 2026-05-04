@@ -15,5 +15,28 @@ export const metadata: Metadata = {
 };
 
 export default function BungalowsInKitengela() {
-    return <PropertyDetailClient />;
+    return (
+        <>
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{
+                    __html: JSON.stringify({
+                        "@context": "https://schema.org",
+                        "@type": "RealEstateListing",
+                        "name": "Ivanna Residence — 3 Bedroom Bungalow in Kitengela",
+                        "description": "Luxurious 3-bedroom + DSQ bungalow for sale in a gated community in Kitengela. Features all ensuite bedrooms, 179 sqm plinth area, and KCB financing.",
+                        "url": "https://wearesibbs.com/properties/bungalows-in-kitengela",
+                        "image": "https://wearesibbs.com/properties/bungalows-in-kitengela/ivanna-render-1.webp",
+                        "address": {
+                            "@type": "PostalAddress",
+                            "addressLocality": "Kitengela",
+                            "addressRegion": "Kajiado",
+                            "addressCountry": "KE"
+                        }
+                    }),
+                }}
+            />
+            <PropertyDetailClient />
+        </>
+    );
 }

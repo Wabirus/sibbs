@@ -15,5 +15,28 @@ export const metadata: Metadata = {
 };
 
 export default function BungalowInThika() {
-    return <PropertyDetailClient />;
+    return (
+        <>
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{
+                    __html: JSON.stringify({
+                        "@context": "https://schema.org",
+                        "@type": "RealEstateListing",
+                        "name": "The KNOX Residence 1 — 4 Bedroom Bungalow in Thika",
+                        "description": "4-bedroom bungalow for sale in Thika Landless. Features beautiful yards, ample parking, and borehole water supply. Now sold.",
+                        "url": "https://wearesibbs.com/properties/bungalow-in-thika",
+                        "image": "https://wearesibbs.com/properties/bungalow-in-thika/5872941386271755598.jpg",
+                        "address": {
+                            "@type": "PostalAddress",
+                            "addressLocality": "Thika",
+                            "addressRegion": "Kiambu",
+                            "addressCountry": "KE"
+                        }
+                    }),
+                }}
+            />
+            <PropertyDetailClient />
+        </>
+    );
 }

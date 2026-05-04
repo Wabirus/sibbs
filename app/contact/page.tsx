@@ -1,6 +1,13 @@
+import type { Metadata } from "next";
 import Image from "next/image";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+
+export const metadata: Metadata = {
+    title: "Contact Us — Get in Touch with SIBBS Real Estate",
+    description: "Have questions about properties for sale in Kenya? Contact SIBBS Real Estate today. Visit our office at Kwanza Twin Towers or call us at +254 7433 63186.",
+    keywords: ["contact SIBBS", "real estate office Ruiru", "Kenya real estate phone number", "book property viewing Kenya"],
+};
 
 export default function ContactPage() {
     return (

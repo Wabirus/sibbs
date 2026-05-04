@@ -4,6 +4,36 @@ import Link from "next/link";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { properties } from "@/data/properties";
+import type { Metadata, ResolvingMetadata } from "next";
+
+type Props = {
+    params: Promise<{ id: string }>;
+    searchParams: Promise<{ [key: string]: string | string[] | undefined }>;
+};
+
+export async function generateMetadata(
+    { params }: Props,
+    parent: ResolvingMetadata
+): Promise<Metadata> {
+    const { id } = await params;
+    const property = properties.find((p) => p.id === id);
+
+    if (!property) {
+        return {
+            title: "Property Not Found",
+        };
+    }
+
+    const previousImages = (await parent).openGraph?.images || [];
+
+    return {
+        title: `${property.name} — ${property.location.city}`,
+        description: `Explore this ${property.specs.beds} bedroom ${property.type === "sale" ? "house for sale" : "property for rent"} in ${property.location.city}. Features ${property.specs.areaSqM} m² area, ${property.specs.baths} baths. Guide price: ${property.currency}${property.price.toLocaleString()}.`,
+        openGraph: {
+            images: [property.image, ...previousImages],
+        },
+    };
+}
 
 export default async function PropertyDetail({
     params,
@@ -27,6 +57,29 @@ export default async function PropertyDetail({
 
     return (
         <main className="bg-white min-h-screen font-nunito text-gray-900">
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{
+                    __html: JSON.stringify({
+                        "@context": "https://schema.org",
+                        "@type": "RealEstateListing",
+                        "name": property.name,
+                        "description": `${property.specs.beds} bedroom ${property.type === "sale" ? "house for sale" : "property for rent"} in ${property.location.city}.`,
+                        "url": `https://wearesibbs.com/properties/${property.id}`,
+                        "image": property.image,
+                        "address": {
+                            "@type": "PostalAddress",
+                            "addressLocality": property.location.city,
+                            "addressCountry": property.location.country
+                        },
+                        "offers": {
+                            "@type": "Offer",
+                            "price": property.price,
+                            "priceCurrency": property.currency
+                        }
+                    }),
+                }}
+            />
             <Header />
 
             {/* ── Masonry Hero Gallery ──────────────────────── */}
