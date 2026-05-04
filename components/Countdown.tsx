@@ -77,7 +77,7 @@ export default function Countdown() {
               variants={fadeUp}
               className="text-2xl md:text-3xl font-extrabold text-primary mb-1 font-raleway tracking-tight"
             >
-              Open Day Countdown
+              Ground Breaking Countdown
             </motion.h2>
             <motion.p 
               variants={fadeUp}
