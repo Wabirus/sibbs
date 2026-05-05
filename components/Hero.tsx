@@ -59,7 +59,7 @@ export default function Hero() {
           <motion.h1
             variants={fadeUp}
             transition={springGentle}
-            className="text-2xl md:text-3xl lg:text-4xl font-extrabold font-georgia leading-tight tracking-tight whitespace-nowrap"
+            className="text-2xl md:text-3xl lg:text-4xl font-extrabold font-georgia leading-tight tracking-tight"
           >
             <span className="text-primary">Building</span>{" "}
             <span className="text-gold">Residencies,</span>{" "}
@@ -69,7 +69,7 @@ export default function Hero() {
         </motion.div>
 
         {/* ─── Countdown Section ──────────────────────────── */}
-        <Countdown />
+        {/* <Countdown /> */}
 
         {/* ─── Portfolio Columns ────────────────────────── */}
         <motion.div

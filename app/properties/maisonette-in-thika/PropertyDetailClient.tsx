@@ -180,7 +180,7 @@ export default function PropertyDetailClient() {
                 <h2 className={styles.sectionTitle}>Location</h2>
                 <div className={styles.mapContainer}>
                     <iframe
-                        src="https://maps.google.com/maps?q=-1.464752,37.044907&hl=en&z=14&output=embed"
+                        src="https://maps.google.com/maps?q=-1.069614,37.151031&hl=en&z=14&output=embed"
                         width="100%"
                         height="450"
                         style={{ border: 0, borderRadius: "16px" }}

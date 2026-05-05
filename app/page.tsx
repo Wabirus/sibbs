@@ -61,7 +61,7 @@ export default function Home() {
       <About />
       <Properties />
       <section className="py-12 bg-gray-50">
-        <div className="max-w-7xl mx-auto flex items-center justify-between p-6 border border-primary/10 rounded-xl">
+        <div className="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between p-6 gap-6 border border-primary/10 rounded-xl">
           <h3 className="text-xl font-bold text-primary">Financing available</h3>
           <div className="flex items-center">
             <Image src="/images/kcb-group-plc-logo.webp" alt="KCB Logo" width={80} height={30} style={{ objectFit: 'contain' }} />
