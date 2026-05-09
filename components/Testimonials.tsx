@@ -27,14 +27,14 @@ const testimonials: Testimonial[] = [
     name: "Sarah Mwangi",
     role: "Investor",
     message:
-      "I bought a 3 bedroom plus DSQ unit in the Kitengela gated community. The layout is practical and the finishing meets good standards. The property value has grown since purchase. The team has kept communication clear from booking to handover.",
+      "I invested in Ivanna Residence because the project design stands out in both quality and location. The modern design, impressive proposed finishing standards, and strategic Kitengela location make it a strong investment opportunity. The SIBBS team has remained professional, responsive, and transparent which has given me confidence in the project.",
     initials: "SM",
   },
   {
     name: "John Kipchoge",
     role: "Home Owner",
     message:
-      "I purchased a 3 bedroom plus DSQ home in Kitengela. The rooms are spacious and add strong value for family use. The process stayed transparent from start to finish. I received all documents on time.",
+      "As a first-time homeowner, I wanted a team that would guide me with honesty and professionalism, and Ivanna Residence delivered exactly that. The process has been smooth, the communication has been consistent, and the homes combine elegance with affordability. I’m proud to be part of this growing community in Kitengela",
     initials: "JK",
   },
 ];
