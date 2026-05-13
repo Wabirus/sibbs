@@ -69,7 +69,7 @@ export default function Hero() {
         </motion.div>
 
         {/* ─── Countdown Section ──────────────────────────── */}
-        {/* <Countdown /> */}
+        <Countdown />
 
         {/* ─── Portfolio Columns ────────────────────────── */}
         <motion.div

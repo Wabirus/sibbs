@@ -21,11 +21,11 @@ export default function Countdown() {
     // Target: 23 May of the current year (or next year if already passed)
     const now = new Date();
     let targetYear = now.getFullYear();
-    let targetDate = new Date(`May 23, ${targetYear} 09:00:00`).getTime();
+    let targetDate = new Date(`June 13, ${targetYear} 09:00:00`).getTime();
     
     if (now.getTime() > targetDate) {
       targetYear++;
-      targetDate = new Date(`May 23, ${targetYear} 09:00:00`).getTime();
+      targetDate = new Date(`June 13, ${targetYear} 09:00:00`).getTime();
     }
 
     const interval = setInterval(() => {
@@ -83,7 +83,7 @@ export default function Countdown() {
               variants={fadeUp}
               className="text-gray-500 font-nunito text-base md:text-lg"
             >
-              Join us on <strong className="font-extrabold text-gold tracking-wider">23RD MAY</strong>.
+              Join us on <strong className="font-extrabold text-gold tracking-wider">13TH JUNE</strong>.
             </motion.p>
           </div>
 
