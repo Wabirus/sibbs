@@ -52,6 +52,32 @@ export default function Countdown() {
 
   return (
     <section className="relative w-full py-6 my-2 overflow-hidden border-y border-gray-200/50">
+      {/* Floating ribbon keyframes */}
+      <style>{`
+        @keyframes ribbonFloat {
+          0%   { transform: translateX(-120%) skewX(-18deg); opacity: 0; }
+          8%   { opacity: 1; }
+          60%  { opacity: 0.85; }
+          100% { transform: translateX(120vw) skewX(-18deg); opacity: 0; }
+        }
+        .ribbon-1 {
+          animation: ribbonFloat 2.4s cubic-bezier(0.4,0,0.2,1) infinite;
+          animation-delay: 0s;
+        }
+        .ribbon-2 {
+          animation: ribbonFloat 2.4s cubic-bezier(0.4,0,0.2,1) infinite;
+          animation-delay: 0.35s;
+        }
+        .ribbon-3 {
+          animation: ribbonFloat 2.4s cubic-bezier(0.4,0,0.2,1) infinite;
+          animation-delay: 0.7s;
+        }
+        @keyframes ribbonCycle {
+          0%, 100% { opacity: 1; }
+          50%       { opacity: 0; }
+        }
+      `}</style>
+
       {/* Background Image & Overlay */}
       <div className="absolute inset-0 z-0">
         <Image
@@ -61,6 +87,52 @@ export default function Countdown() {
           className="object-cover opacity-[0.04]"
         />
         <div className="absolute inset-0 bg-gradient-to-b from-white/80 via-white to-white/80" />
+      </div>
+
+      {/* Floating ribbons */}
+      <div aria-hidden="true" className="absolute inset-0 z-[1] pointer-events-none overflow-hidden">
+        {/* Gold ribbon */}
+        <div
+          className="ribbon-1 absolute"
+          style={{
+            top: "18%",
+            left: 0,
+            width: "55%",
+            height: "10px",
+            background: "linear-gradient(90deg, transparent 0%, #C9A84C 20%, #F5D98B 50%, #C9A84C 80%, transparent 100%)",
+            borderRadius: "9999px",
+            filter: "blur(1px)",
+            boxShadow: "0 0 14px 3px rgba(201,168,76,0.55)",
+          }}
+        />
+        {/* White ribbon */}
+        <div
+          className="ribbon-2 absolute"
+          style={{
+            top: "46%",
+            left: 0,
+            width: "45%",
+            height: "7px",
+            background: "linear-gradient(90deg, transparent 0%, #ffffff 20%, #f0f4ff 55%, #ffffff 80%, transparent 100%)",
+            borderRadius: "9999px",
+            filter: "blur(1.5px)",
+            boxShadow: "0 0 12px 4px rgba(255,255,255,0.7)",
+          }}
+        />
+        {/* Blue (primary) ribbon */}
+        <div
+          className="ribbon-3 absolute"
+          style={{
+            top: "72%",
+            left: 0,
+            width: "50%",
+            height: "8px",
+            background: "linear-gradient(90deg, transparent 0%, #1a3a6b 20%, #2a5298 50%, #1a3a6b 80%, transparent 100%)",
+            borderRadius: "9999px",
+            filter: "blur(1px)",
+            boxShadow: "0 0 14px 3px rgba(26,58,107,0.45)",
+          }}
+        />
       </div>
 
       <div className="relative z-10 max-w-6xl mx-auto px-4">
