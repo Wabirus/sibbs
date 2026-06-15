@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import Countdown from "./Countdown";
+// import Countdown from "./Countdown";
 import { motion } from "motion/react";
 import {
   fadeUp,
@@ -68,8 +68,8 @@ export default function Hero() {
           </motion.h1>
         </motion.div>
 
-        {/* ─── Countdown Section ──────────────────────────── */}
-        <Countdown />
+        {/* ─── Countdown Section (deactivated — date passed) ──────────────────────────── */}
+        {/* <Countdown /> */}
 
         {/* ─── Portfolio Columns ────────────────────────── */}
         <motion.div
