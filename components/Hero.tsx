@@ -21,7 +21,7 @@ interface PortfolioColumn {
 const portfolioColumns: PortfolioColumn[] = [
   {
     image: "/properties/maisonette-in-thika/knox2-1.webp",
-    title: "The KNOX Residence 2",
+    title: "The KNOX Residence",
     description:
       "Explore our premium 4-bedroom + DSQ maisonette in Thika, designed for modern family living with spacious layouts and quality finishes.",
     href: "/properties/maisonette-in-thika",
@@ -35,7 +35,7 @@ const portfolioColumns: PortfolioColumn[] = [
   },
   {
     image: "/properties/bungalow-in-thika/5872941386271755598.jpg",
-    title: "The KNOX Residence 1",
+    title: "Happy Valley Residence",
     description:
       "Get started on building your dream home with our upcoming developments. Register your interest today for early access.",
     href: "/properties/bungalow-in-thika",

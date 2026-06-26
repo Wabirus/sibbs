@@ -23,7 +23,7 @@ interface Property {
 
 const properties: Property[] = [
   {
-    title: "The KNOX Residence 2",
+    title: "The KNOX Residence",
     price: "KES 20M",
     location: "Thika Landless, Kiambu",
     beds: 4,
@@ -47,7 +47,7 @@ const properties: Property[] = [
     slug: "bungalows-in-kitengela",
   },
   {
-    title: "The KNOX Residence 1",
+    title: "Happy Valley Residence",
     price: "SOLD",
     location: "Thika Landless, Kiambu",
     beds: 4,

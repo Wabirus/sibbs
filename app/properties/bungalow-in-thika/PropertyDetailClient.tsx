@@ -8,7 +8,7 @@ import { fadeUp, sectionReveal, staggerContainer, staggerItem, viewportConfig } 
 import styles from "@/components/PropertyDetail.module.css";
 
 const images = [
-    { src: "/properties/bungalow-in-thika/5872941386271755598.jpg", alt: "Front view of The KNOX Residence 1" },
+    { src: "/properties/bungalow-in-thika/5872941386271755598.jpg", alt: "Front view of Happy Valley Residence" },
     { src: "/properties/bungalow-in-thika/5872941386271755592.jpg", alt: "Spacious living room" },
     { src: "/properties/bungalow-in-thika/5872941386271755596.jpg", alt: "Living space" },
     { src: "/properties/bungalow-in-thika/5872941386271755591.jpg", alt: "Modern kitchen area" },
@@ -73,7 +73,7 @@ export default function PropertyDetailClient() {
                     Properties
                 </Link>
                 <span className={styles.breadcrumbSep}>/</span>
-                <span className={styles.breadcrumbCurrent}>The KNOX Residence 1</span>
+                <span className={styles.breadcrumbCurrent}>Happy Valley Residence</span>
             </nav>
 
             {/* Hero Section */}
@@ -85,7 +85,7 @@ export default function PropertyDetailClient() {
             >
                 <div className={styles.heroContent}>
                     <span className={styles.tag}>Sold</span>
-                    <h1 className={styles.title}>The KNOX Residence 1</h1>
+                    <h1 className={styles.title}>Happy Valley Residence</h1>
                     <p className={styles.location}>
                         <i className="fas fa-map-marker-alt" /> Thika Landless, Kiambu County
                     </p>

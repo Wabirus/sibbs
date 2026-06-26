@@ -8,16 +8,16 @@ import { fadeUp, sectionReveal, staggerContainer, staggerItem, viewportConfig } 
 import styles from "@/components/PropertyDetail.module.css";
 
 const images = [
-    { src: "/properties/maisonette-in-thika/knox2-1.webp", alt: "The KNOX Residence 2 - Front view" },
+    { src: "/properties/maisonette-in-thika/knox2-1.webp", alt: "The KNOX Residence - Front view" },
     { src: "/properties/maisonette-in-thika/living-room-entry.jpg", alt: "Living room with front door entry" },
     { src: "/properties/maisonette-in-thika/kitchen-living.jpg", alt: "Open kitchen and living area" },
-    { src: "/properties/maisonette-in-thika/knox2-2.webp", alt: "The KNOX Residence 2 - Kitchen interior" },
+    { src: "/properties/maisonette-in-thika/knox2-2.webp", alt: "The KNOX Residence - Kitchen interior" },
     { src: "/properties/maisonette-in-thika/bathroom.jpg", alt: "Modern ensuite bathroom" },
     { src: "/properties/maisonette-in-thika/bedroom-sunlight.jpg", alt: "Spacious bedroom with natural sunlight" },
     { src: "/properties/maisonette-in-thika/bedroom-two-windows.jpg", alt: "Bedroom with panoramic windows" },
     { src: "/properties/maisonette-in-thika/wardrobe-closet.jpg", alt: "Built-in wardrobe and closet" },
-    { src: "/properties/maisonette-in-thika/knox2-3.webp", alt: "The KNOX Residence 2 - Front angle wide" },
-    { src: "/properties/maisonette-in-thika/aerial-view.jpg", alt: "Aerial view of The KNOX Residence 2" },
+    { src: "/properties/maisonette-in-thika/knox2-3.webp", alt: "The KNOX Residence - Front angle wide" },
+    { src: "/properties/maisonette-in-thika/aerial-view.jpg", alt: "Aerial view of The KNOX Residence" },
 ];
 
 const amenities = [
@@ -76,7 +76,7 @@ export default function PropertyDetailClient() {
                     Properties
                 </Link>
                 <span className={styles.breadcrumbSep}>/</span>
-                <span className={styles.breadcrumbCurrent}>The KNOX Residence 2</span>
+                <span className={styles.breadcrumbCurrent}>The KNOX Residence</span>
             </nav>
 
             {/* Hero Section */}
@@ -88,7 +88,7 @@ export default function PropertyDetailClient() {
             >
                 <div className={styles.heroContent}>
                     <span className={styles.tag}>For Sale</span>
-                    <h1 className={styles.title}>The KNOX Residence 2</h1>
+                    <h1 className={styles.title}>The KNOX Residence</h1>
                     <p className={styles.location}>
                         <i className="fas fa-map-marker-alt" /> Thika Landless, Kiambu County
                     </p>
@@ -196,7 +196,7 @@ export default function PropertyDetailClient() {
             <section className={styles.ctaSection}>
                 <h2 className={styles.ctaTitle}>Interested in this property?</h2>
                 <p className={styles.ctaText}>
-                    Contact us today for a viewing or more information about the stunning The KNOX Residence 2 in Thika Landless.
+                    Contact us today for a viewing or more information about the stunning The KNOX Residence in Thika Landless.
                 </p>
                 <div className={styles.ctaButtons}>
                     <Link href="/#contact" className={styles.ctaPrimary}>
