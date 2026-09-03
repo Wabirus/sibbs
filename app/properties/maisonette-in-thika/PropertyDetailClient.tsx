@@ -39,7 +39,7 @@ const highlights = [
     "Larger family room suitable for home office",
     "Consistent supply of water from a borehole",
     "333 m² plinth area",
-    "Price: KES 20 Million (negotiable)",
+    "Price: KES 17 Million (negotiable)",
 ];
 
 export default function PropertyDetailClient() {
@@ -92,7 +92,7 @@ export default function PropertyDetailClient() {
                     <p className={styles.location}>
                         <i className="fas fa-map-marker-alt" /> Thika Landless, Kiambu County
                     </p>
-                    <p className={styles.price}>KES 20M <span style={{ fontSize: '0.6em', opacity: 0.8 }}>(Negotiable)</span></p>
+                    <p className={styles.price}>KES 17M <span style={{ fontSize: '0.6em', opacity: 0.8 }}>(Negotiable)</span></p>
                 </div>
             </motion.section>
 

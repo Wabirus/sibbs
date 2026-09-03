@@ -24,7 +24,7 @@ interface Property {
 const properties: Property[] = [
   {
     title: "The KNOX Residence",
-    price: "KES 20M",
+    price: "KES 17M",
     location: "Thika Landless, Kiambu",
     beds: 4,
     baths: 4,

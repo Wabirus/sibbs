@@ -4,7 +4,7 @@ import PropertyDetailClient from "./PropertyDetailClient";
 export const metadata: Metadata = {
     title: "The KNOX Residence — SIBBS Real Estate",
     description:
-        "4 bedroom + DSQ maisonette for sale in Thika Landless. Features 333 sqm plinth area, all ensuite bedrooms with balconies, spacious parking for 6 cars, large rooftop, borehole water supply. KES 20M (negotiable).",
+        "4 bedroom + DSQ maisonette for sale in Thika Landless. Features 333 sqm plinth area, all ensuite bedrooms with balconies, spacious parking for 6 cars, large rooftop, borehole water supply. KES 17M (negotiable).",
     keywords: [
         "maisonette Thika",
         "4 bedroom DSQ Thika",
