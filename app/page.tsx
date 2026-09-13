@@ -63,9 +63,11 @@ export default function Home() {
       <section className="py-12 bg-gray-50">
         <div className="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between p-6 gap-6 border border-primary/10 rounded-xl">
           <h3 className="text-xl font-bold text-primary">Financing available</h3>
-          <div className="flex items-center">
+          <div className="flex items-center gap-4">
             <Image src="/images/kcb-group-plc-logo.webp" alt="KCB Logo" width={80} height={30} style={{ objectFit: 'contain' }} />
-            <span className="ml-3 text-sm font-bold text-gray-400">Official Partner</span>
+            <div className="w-px h-8 bg-gray-300" />
+            <Image src="/images/ncba-logo.jpg" alt="NCBA Logo" width={70} height={40} style={{ objectFit: 'contain' }} />
+            <span className="ml-1 text-sm font-bold text-gray-400">Official Partners</span>
           </div>
         </div>
       </section>

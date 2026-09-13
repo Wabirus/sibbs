@@ -40,6 +40,7 @@ const highlights = [
     "Price: KES 10 Million",
     "10% discount for off-plan buying",
     "KCB Partnership available",
+    "NCBA Partnership available",
 ];
 
 export default function PropertyDetailClient() {
@@ -218,12 +219,14 @@ export default function PropertyDetailClient() {
                     <div className="mt-8 pt-6 border-t border-gray-200">
                         <div className="flex flex-col md:flex-row items-center justify-between gap-6">
                             <div>
-                                <h3 className="text-xl font-bold text-primary mb-2">Financing Partner</h3>
-                                <p className="text-gray-600">Take advantage of our KCB partnership for flexible mortgage options.</p>
+                                <h3 className="text-xl font-bold text-primary mb-2">Financing Partners</h3>
+                                <p className="text-gray-600">Take advantage of our KCB &amp; NCBA partnerships for flexible mortgage options.</p>
                             </div>
-                            <div className="bg-white px-6 py-3 rounded-xl border-2 border-primary/10 shadow-lg flex items-center">
+                            <div className="bg-white px-6 py-3 rounded-xl border-2 border-primary/10 shadow-lg flex items-center gap-4">
                                 <Image src="/images/kcb-group-plc-logo.webp" alt="KCB Logo" width={80} height={30} style={{ objectFit: 'contain' }} />
-                                <span className="ml-3 text-sm font-bold text-gray-400">Official Partner</span>
+                                <div className="w-px h-8 bg-gray-200" />
+                                <Image src="/images/ncba-logo.jpg" alt="NCBA Logo" width={70} height={40} style={{ objectFit: 'contain' }} />
+                                <span className="ml-1 text-sm font-bold text-gray-400">Official Partners</span>
                             </div>
                         </div>
                     </div>
