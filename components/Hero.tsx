@@ -78,7 +78,7 @@ export default function Hero() {
           initial="hidden"
           animate="visible"
         >
-          {portfolioColumns.map((col) => (
+          {portfolioColumns.map((col, index) => (
             <motion.div
               key={col.title}
               variants={staggerItem}
@@ -96,7 +96,7 @@ export default function Hero() {
                     fill
                     sizes="(max-width: 768px) 100vw, 33vw"
                     className="object-cover group-hover:scale-105 transition-transform duration-700"
-                    priority
+                    priority={index === 0}
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                 </div>
