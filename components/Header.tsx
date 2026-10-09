@@ -63,6 +63,27 @@ export default function Header() {
             </span>
             info@wearesibbs.com
           </a>
+          <div className="hidden sm:block w-px h-4 bg-white/20" />
+          <div className="hidden sm:flex items-center gap-3">
+            <a
+              href="https://www.facebook.com/share/19xCcFC879/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center justify-center w-6 h-6 bg-white/10 rounded-full text-[12px] hover:bg-gold hover:text-primary-dark transition-all duration-200"
+              aria-label="Facebook"
+            >
+              <i className="fab fa-facebook-f" />
+            </a>
+            <a
+              href="https://www.instagram.com/wearesibbs?obrf=a2FwYWhtd2htendw"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center justify-center w-6 h-6 bg-white/10 rounded-full text-[12px] hover:bg-gold hover:text-primary-dark transition-all duration-200"
+              aria-label="Instagram"
+            >
+              <i className="fab fa-instagram" />
+            </a>
+          </div>
         </div>
       </motion.div>
 
