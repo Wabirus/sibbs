@@ -9,6 +9,9 @@ export const metadata: Metadata = {
     title: "Our Properties — Maisonettes & Bungalows for Sale in Kenya",
     description: "Browse our premium selection of residential properties in Kenya, including 4-bedroom maisonettes in Thika and 3-bedroom bungalows in Kitengela.",
     keywords: ["properties for sale Kenya", "houses in Thika", "bungalows in Kitengela", "Kenyan real estate listings"],
+    alternates: {
+        canonical: "/properties",
+    },
 };
 
 export default function PropertiesPage() {

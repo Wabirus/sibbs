@@ -8,6 +8,9 @@ export const metadata: Metadata = {
     title: "About Us — SIBBS Real Estate Kenya",
     description: "Learn more about SIBBS Real Estate, Kenya's premier property consultancy. We specialize in high-quality, affordable residential housing and luxury investment properties.",
     keywords: ["SIBBS Real Estate", "property developers Kenya", "real estate agency Nairobi", "about SIBBS"],
+    alternates: {
+        canonical: "/about",
+    },
 };
 
 export default function AboutPage() {

@@ -12,6 +12,9 @@ export const metadata: Metadata = {
         "Thika property",
         "SIBBS real estate Thika",
     ],
+    alternates: {
+        canonical: "/properties/bungalow-in-thika",
+    },
 };
 
 export default function BungalowInThika() {

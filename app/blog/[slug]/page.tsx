@@ -1,9 +1,27 @@
+import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import Image from "next/image";
 import Link from "next/link";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { blogPosts } from "@/data/blog";
+
+export async function generateMetadata({
+    params,
+}: {
+    params: Promise<{ slug: string }>;
+}): Promise<Metadata> {
+    const { slug } = await params;
+    const post = blogPosts.find((p) => p.slug === slug);
+
+    if (!post) return {};
+
+    return {
+        alternates: {
+            canonical: `/blog/${slug}`,
+        },
+    };
+}
 
 export default async function BlogPostPage({
     params,

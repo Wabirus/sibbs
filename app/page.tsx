@@ -48,9 +48,8 @@ export default function Home() {
               "closes": "17:00"
             },
             "sameAs": [
-              "https://www.facebook.com/wearesibbs",
-              "https://www.instagram.com/wearesibbs",
-              "https://twitter.com/wearesibbs"
+              "https://www.facebook.com/share/19xCcFC879/",
+              "https://www.instagram.com/wearesibbs?obrf=a2FwYWhtd2htendw"
             ]
           }),
         }}

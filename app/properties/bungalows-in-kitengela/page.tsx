@@ -12,6 +12,9 @@ export const metadata: Metadata = {
         "DSQ Kitengela property",
         "SIBBS real estate Kitengela",
     ],
+    alternates: {
+        canonical: "/properties/bungalows-in-kitengela",
+    },
 };
 
 export default function BungalowsInKitengela() {

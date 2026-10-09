@@ -43,12 +43,6 @@ export const metadata: Metadata = {
       },
     ],
   },
-  twitter: {
-    card: "summary_large_image",
-    title: "SIBBS Real Estate — Building Residencies, Building Legacies",
-    description: "Affordable, high-quality residential housing in Kenya.",
-    images: ["/og-image.jpg"],
-  },
   alternates: {
     canonical: "/",
   },

@@ -137,9 +137,8 @@ export default function Contact() {
                 </p>
                 <div className="flex gap-3 px-4">
                   {[
-                    { icon: "fab fa-facebook-f", href: "#" },
-                    { icon: "fab fa-instagram", href: "#" },
-                    { icon: "fab fa-twitter", href: "#" },
+                    { icon: "fab fa-facebook-f", href: "https://www.facebook.com/share/19xCcFC879/" },
+                    { icon: "fab fa-instagram", href: "https://www.instagram.com/wearesibbs?obrf=a2FwYWhtd2htendw" },
                     { icon: "fab fa-linkedin-in", href: "#" },
                   ].map((social) => (
                     <a

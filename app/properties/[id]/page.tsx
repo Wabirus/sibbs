@@ -32,6 +32,9 @@ export async function generateMetadata(
         openGraph: {
             images: [property.image, ...previousImages],
         },
+        alternates: {
+            canonical: `/properties/${id}`,
+        },
     };
 }
 

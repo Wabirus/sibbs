@@ -17,9 +17,8 @@ const footerLinks = [
 ];
 
 const socialLinks = [
-  { icon: "fab fa-facebook-f", href: "#", label: "Facebook" },
-  { icon: "fab fa-instagram", href: "#", label: "Instagram" },
-  { icon: "fab fa-twitter", href: "#", label: "Twitter" },
+  { icon: "fab fa-facebook-f", href: "https://www.facebook.com/share/19xCcFC879/", label: "Facebook" },
+  { icon: "fab fa-instagram", href: "https://www.instagram.com/wearesibbs?obrf=a2FwYWhtd2htendw", label: "Instagram" },
   { icon: "fab fa-linkedin-in", href: "#", label: "LinkedIn" },
 ];
 
